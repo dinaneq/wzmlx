@@ -114,7 +114,7 @@ UPSTREAM_REPO = environ.get(
     ""
 )
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = "https://github.com/Syuhadak27/wzmlx-indo"
+    UPSTREAM_REPO = "https://gitlab.com/Syuhadak27/wzmlx-indo"
 
 UPSTREAM_BRANCH = environ.get(
     "UPSTREAM_BRANCH",
