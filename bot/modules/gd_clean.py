@@ -30,22 +30,23 @@ async def driveclean(_, message):
     except (KeyError, IndexError):
         return await editMessage(clean_msg, "Google Drive ID could not be found in the provided link")
     buttons = ButtonMaker()
-    buttons.ibutton('Move to Bin', f'gdclean clear {drive_id} trash')
-    buttons.ibutton('Permanent Clean', f'gdclean clear {drive_id}')
-    buttons.ibutton('Stop GDrive Clean', 'gdclean stop', 'footer')
+    buttons.ibutton('Pindah ke Sampah', f'gdclean clear {drive_id} trash')
+    buttons.ibutton('Hapus Permanen', f'gdclean clear {drive_id}')
+    buttons.ibutton('Berhenti Pembersihan', 'gdclean stop', 'footer')
     await editMessage(clean_msg, f'''⌬ <b><i>GDrive Clean/Trash :</i></b>
     
-┎ <b>Name:</b> {name}
-┃ <b>Size:</b> {get_readable_file_size(size)}
-┖ <b>Files:</b> {files} | <b>Folders:</b> {folders}
+🔴<b>Name Folder  :</b> {name}
+🔴<b>Ukuran Folder :</b> {get_readable_file_size(size)}
+🔴<b>Jumlah Files   :</b> {files}
+🔴<b>Jumlah Folder :</b> {folders}
     
 <b>NOTES:</b>
-<i>1. All files are permanently deleted if Permanent Del, not moved to trash.
-2. Folder doesn't gets Deleted.
-3. Delete files of custom folder via giving link along with cmd, but it should have delete permissions.
-4. Move to Bin Moves all your files to trash but can be restored again if have permissions.</i>
+<i>1. Semua file terhapus permanen jika Del Permanen, tidak dipindahkan ke sampah.
+2. Folder tidak terhapus.
+3. Hapus file folder khusus melalui pemberian tautan bersama dengan cmd, tetapi harus memiliki izin penghapusan.
+4. Pindah ke Bin Memindahkan semua file Anda ke sampah tetapi dapat dikembalikan lagi jika memiliki izin.</i>
     
-<code>Choose the Required Action below to Clean your Drive!</code>''', buttons.build_menu(2))
+<code>Pilih Tindakan yang Diperlukan di bawah ini untuk Membersihkan Drive Anda!</code>''', buttons.build_menu(2))
 
 
 @new_task
@@ -64,7 +65,7 @@ async def drivecleancb(_, query):
         await editMessage(message, msg)
     elif data[1] == "stop":
         await query.answer()
-        await editMessage(message, '⌬ <b>DriveClean Stopped!</b>')
+        await editMessage(message, '⌬ <b>Pembersihan GDrive di batalkan</b>')
         await auto_delete_message(message, message)
         
 

@@ -45,15 +45,15 @@ PAGE_NO      = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING   = "📤mengunggah"
-    STATUS_DOWNLOADING = "📥mengunduh"
-    STATUS_CLONING     = "🔱menggandakan"
+    STATUS_UPLOADING   = "📤Unggah..."
+    STATUS_DOWNLOADING = "📥Unduh..."
+    STATUS_CLONING     = "🔱Menggandakan..."
     STATUS_QUEUEDL     = "⏳DL"
     STATUS_QUEUEUP     = "⏳UP"
     STATUS_PAUSED      = "⏸berhenti"
-    STATUS_ARCHIVING   = "🗃membungkus"
-    STATUS_EXTRACTING  = "⚒️membongkar"
-    STATUS_SPLITTING   = "✂membagi"
+    STATUS_ARCHIVING   = "🗃Membungkus..."
+    STATUS_EXTRACTING  = "⚒️Membongkar..."
+    STATUS_SPLITTING   = "✂Membagi..."
     STATUS_METADATA    = "Aᴅᴅɪɴɢ Mᴇᴛᴀᴅᴀᴛᴀ"
     STATUS_CHECKING    = "CʜᴇᴄᴋUᴘ"
     STATUS_SEEDING     = "Sᴇᴇᴅq"

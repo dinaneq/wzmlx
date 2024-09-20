@@ -405,9 +405,9 @@ async def forcesub(message, ids, button=None):
     if join_button:
         if button is None:
             button = ButtonMaker()
-        _msg = "You haven't joined our channel yet!"
+        _msg = "Anda belum bergabung dengan saluran kami!\nSilahkan gabung dahulu dan ulangi tugas anda"
         for key, value in join_button.items():
-            button.ubutton(f'Join {key}', value, 'footer')
+            button.ubutton(f'Gabung {key}', value, 'footer')
     return _msg, button
 
 
@@ -426,6 +426,6 @@ async def check_botpm(message, button=None):
     except Exception as e:
         if button is None:
             button = ButtonMaker()
-        _msg = "<i>You didn't START the bot in PM (Private)</i>"
-        button.ubutton("Start Bot Now", f"https://t.me/{bot_name}?start=start", 'header')
+        _msg = "<i>Anda belum mulai bot ini di PM\nSilahkan tekan tombol di bawah dan ulangi tugas anda</i>"
+        button.ubutton("Mulai Bot !!!", f"https://t.me/{bot_name}?start=start", 'header')
         return _msg, button

@@ -4,25 +4,26 @@ class WZMLStyle:
     # async def start(client, message) ---> __main__.py
     ST_BN1_NAME = 'Original_Rᴇᴘᴏ'
     ST_BN1_URL = 'https://gitlab.com/Jot4349/WZML-X-ADVANCE'
-    ST_BN2_NAME = 'Uᴘᴅᴀᴛᴇs'
+    ST_BN2_NAME = 'Update'
     ST_BN2_URL = 'https://t.me/NordBotz'
     ST_MSG = '''<blockquote><i>Bot ini dapat melakukan mirror semua tautan, file, dan torrent Anda ke Google Drive atau cloud rclone lainnya, ke Telegram, atau ke server DDL. Ketik {help_command} untuk mendapatkan daftar perintah yang tersedia.</b></blockquote>'''
     ST_BOTPM = '''<i>Sekarang, bot ini akan mengirim semua file dan tautan Anda ke sini. Mulai menggunakan ...</i>'''
     ST_UNAUTH = '''<blockquote><i>Anda bukan pengguna yang diizinkan! Deploy bot WZML-X-ADVANCE Mirror-Leech Anda sendiri.</i></blockquote>'''
-    OWN_TOKEN_GENERATE = '''<b>Tᴇᴍᴘᴏʀᴀʀʏ Tᴏᴋᴇɴ ɪs ɴᴏᴛ ʏᴏᴜʀs!</b>\n\n<i>Kɪɴᴅʟʏ ɢᴇɴᴇʀᴀᴛᴇ ʏᴏᴜʀ ᴏᴡɴ.</i>'''
-    USED_TOKEN = '''<b>Tᴇᴍᴘᴏʀᴀʀʏ Tᴏᴋᴇɴ ᴀʟʀᴇᴀᴅʏ ᴜsᴇᴅ!</b>\n\n<i>Kɪɴᴅʟʏ ɢᴇɴᴇʀᴀᴛᴇ ᴀ ɴᴇᴡ ᴏɴᴇ.</i>'''
-    LOGGED_PASSWORD = '''<b>Bᴏᴛ Aʟʀᴇᴀᴅʏ Lᴏɢɢᴇᴅ Iɴ ᴠɪᴀ Pᴀssᴡᴏʀᴅ</b>\n\n<i>Nᴏ Nᴇᴇᴅ ᴛᴏ Aᴄᴄᴇᴘᴛ Tᴇᴍᴘ Tᴏᴋᴇɴs.</i>'''
-    ACTIVATE_BUTTON = 'Aᴄᴛɪᴠᴀᴛᴇ Tᴇᴍᴘᴏʀᴀʀʏ Tᴏᴋᴇɴ'
-    TOKEN_MSG = '''<b><u>Gᴇɴᴇʀᴀᴛᴇᴅ Tᴇᴍᴘᴏʀᴀʀʏ Lᴏɢɪɴ Tᴏᴋᴇɴ!</u></b>
+    OWN_TOKEN_GENERATE = '''
+Token sementara bukan milik Anda! \nSilakan buat sendiri'''
+    USED_TOKEN = '''<b>Token sementara sudah di gunakan!</b>\n\n<i>nSilakan buat sendiri'.</i>'''
+    LOGGED_PASSWORD = '''<b>Bot sudah berhasil masuk dengan pasword </b>\n\n<i>Sudah tidak memelukan token sementara lagi.</i>'''
+    ACTIVATE_BUTTON = 'Aktifkan token sementara'
+    TOKEN_MSG = '''<b><u>Memvuat token login sementara!</u></b>
 <b>Tᴇᴍᴘ Tᴏᴋᴇɴ:</b> <code>{token}</code>
 <b>Vᴀʟɪᴅɪᴛʏ:</b> {validity}'''
     # ---------------------
     # async def token_callback(_, query): ---> __main__.py
-    ACTIVATED = '✅️ Aᴄᴛɪᴠᴀᴛᴇᴅ ✅'
+    ACTIVATED = '✅️ Diaktifkan ✅'
     # ---------------------
     # async def login(_, message): --> __main__.py
-    LOGGED_IN = '<b>Aʟʀᴇᴀᴅʏ Bᴏᴛ Lᴏɢɪɴ Iɴ!</b>'
-    INVALID_PASS = '<b>Iɴᴠᴀʟɪᴅ Pᴀssᴡᴏʀᴅ!</b>\n\nKindly put the correct Password .'
+    LOGGED_IN = '<b>Bot berhasil login!</b>'
+    INVALID_PASS = '<b>Pasword salah</b>\n\nKindly put the correct Password .'
     PASS_LOGGED = '<b>Bᴏᴛ Pᴇʀᴍᴀɴᴇɴᴛ Lᴏɢɪɴ Sᴜᴄᴄᴇssғᴜʟʟʏ!</b>'
     LOGIN_USED = '<b>Bᴏᴛ Lᴏɢɪɴ Usᴀɢᴇ :</b>\n\n<code>/cmd [password]</code>'
     # ---------------------
@@ -31,26 +32,26 @@ class WZMLStyle:
     WEB_PASTE_BT = '📨 Wᴇʙ Pᴀsᴛᴇ (SB)'
     # ---------------------
     # async def bot_help(client, message): ---> __main__.py
-    BASIC_BT = 'Bᴀsɪᴄ'
-    USER_BT = 'Usᴇʀs'
-    MICS_BT = 'Mɪᴄs'
-    O_S_BT = 'Oᴡɴᴇʀ & Sᴜᴅᴏs'
-    CLOSE_BT = 'Close'
-    HELP_HEADER = "㊂ <b><i>Hᴇʟᴘ Gᴜɪᴅᴇ Mᴇɴᴜ!</i></b>\n\n<b>Nᴏᴛᴇ: <i>Cʟɪᴄᴋ ᴏɴ ᴀɴʏ CMD ᴛᴏ sᴇᴇ ᴍᴏʀᴇ ᴍɪɴᴏʀ ᴅᴇᴛᴀʟɪs.</i></b>"
+    BASIC_BT = 'Dasar'
+    USER_BT = 'Pengguna'
+    MICS_BT = 'Lainnya'
+    O_S_BT = 'Pemilik & Admin'
+    CLOSE_BT = 'Tutup'
+    HELP_HEADER = "㊂ <b><i>Petunjuk menggunakan menu bantuan!</i></b>\n\n<b>Nᴏᴛᴇ: <i>Klik pada PERINTAH mana pun untuk melihat detail kecil lainnya.</i></b>"
 
     # async def stats(client, message):
-    BOT_STATS = '''🌀<b><i>Bᴏᴛ Sᴛᴀᴛɪsᴛɪᴄs :</i></b>
-• <b>Bᴏᴛ Uᴘᴛɪᴍᴇ :</b> {bot_uptime}
+    BOT_STATS = '''🌀<b><i>Bot statistik :</i></b>
+• <b>Waktu Aktive Bot :</b> {bot_uptime}
 
-• <b><i>Rᴀᴍ ( MEMORY ) :</i></b>
+• <b><i>RAM ( MEMORY ) :</i></b>
 • {ram_bar} {ram}%
 • <b>U :</b> {ram_u} • <b>F :</b> {ram_f} • <b>T :</b> {ram_t}
 
-• <b><i>Sᴡᴀᴘ Mᴇᴍᴏʀʏ :</i></b>
+• <b><i>VIRTUAL RAM :</i></b>
 • {swap_bar} {swap}%
 • <b>U :</b> {swap_u} • <b>F :</b> {swap_f} • <b>T :</b> {swap_t}
 
-• <b><i>Dɪsᴋ :</i></b>
+• <b><i>HDD :</i></b>
 • {disk_bar} {disk}%
 • <b>Tᴏᴛᴀʟ Dɪsᴋ Rᴇᴀᴅ :</b> {disk_read}
 • <b>Tᴏᴛᴀʟ Dɪsᴋ Wʀɪᴛᴇ :</b> {disk_write}
@@ -58,8 +59,8 @@ class WZMLStyle:
     
     '''
     SYS_STATS = '''🌀 <b><i>Os Sʏsᴛᴇᴍ :</i></b>
-• <b>Os Uᴘᴛɪᴍᴇ :</b> {os_uptime}
-• <b>Os Vᴇʀsɪᴏɴ :</b> {os_version}
+• <b>Waktu nyala OS :</b> {os_uptime}
+• <b>Versi OS :</b> {os_version}
 • <b>Os Aʀᴄʜ :</b> {os_arch}
 
 🌀 <b><i>Nᴇᴛᴡᴏʀᴋ Sᴛᴀᴛs :</i></b>
@@ -77,17 +78,17 @@ class WZMLStyle:
 • <b>Tᴏᴛᴀʟ Cᴏʀᴇ(s) :</b> {total_core}
 • <b>Usᴀʙʟᴇ Cᴘᴜ(s) :</b> {cpu_use}
     '''
-    REPO_STATS = '''🌀 <b><i>Rᴇᴘᴏ Sᴛᴀᴛɪsᴛɪᴄs :</i></b>
-• <b>Bᴏᴛ Uᴘᴅᴀᴛᴇᴅ        :</b> {last_commit}
-• <b>Cᴜʀʀᴇɴᴛ Vᴇʀsɪᴏɴ    :</b> {bot_version}
-• <b>Lᴀᴛᴇsᴛ Vᴇʀsɪᴏɴ     :</b> {lat_version}
-• <b>Lᴀsᴛ CʜᴀɴɢᴇLᴏɢ     :</b> {commit_details}
+    REPO_STATS = '''🌀 <b><i>Repository info :</i></b>
+• <b>Bot Updated        :</b> {last_commit}
+• <b>Versi Saat inu    :</b> {bot_version}
+• <b>Versi Terbaru    :</b> {lat_version}
+• <b>Log Perubahan     :</b> {commit_details}
 
 🌀 <b>Rᴇᴍᴀʀᴋs :</b> <code>{remarks}</code>
     '''
-    BOT_LIMITS = '''🌀 <b><i>Bᴏᴛ Lɪᴍɪᴛᴀᴛɪᴏɴs :</i></b>
+    BOT_LIMITS = '''🌀 <b><i>Bot limits :</i></b>
 <blockquote expandable>• <b>Dɪʀᴇᴄᴛ Lɪᴍɪᴛ :</b> {DL} Gʙ
-• <b>Tᴏʀʀᴇɴᴛ Lɪᴍɪᴛ  :</b> {TL} Gʙ
+• <b>Torent Limit  :</b> {TL} Gʙ
 • <b>GDʀɪᴠᴇ Lɪᴍɪᴛ   :</b> {GL} Gʙ
 • <b>Yᴛ-Dʟᴘ Lɪᴍɪᴛ   :</b> {YL} Gʙ
 • <b>Pʟᴀʏʟɪsᴛ Lɪᴍɪᴛ :</b> {PL}
@@ -103,29 +104,29 @@ class WZMLStyle:
     # ---------------------
 
     # async def restart(client, message): ---> __main__.py
-    RESTARTING = '<i>Rᴇsᴛᴀʀᴛɪɴɢ...</i>'
+    RESTARTING = '<i>Menyalakan Ulang...</i>'
     # ---------------------
 
     # async def restart_notification(): ---> __main__.py
-    RESTART_SUCCESS = '''🌀 <b><i>Rᴇsᴛᴀʀᴛᴇᴅ Sᴜᴄᴄᴇssғᴜʟʟʏ!</i></b>
-• <b>Dᴀᴛᴇ         :</b> {date}
-• <b>Tɪᴍᴇ         :</b> {time}
-• <b>TɪᴍᴇZᴏɴᴇ    :</b> {timz}
-• <b>Vᴇʀsɪᴏɴ      :</b> {version}'''
+    RESTART_SUCCESS = '''🌀 <b><i>Bot berhasil di nyalakan</i></b>
+• <b>Tanggl         :</b> {date}
+• <b>Waktu         :</b> {time}
+• <b>ZonaWaktu    :</b> {timz}
+• <b>Versi           :</b> {version}'''
     RESTARTED = '''🌀 <b><i>Bᴏᴛ Rᴇsᴛᴀʀᴛᴇᴅ!</i></b>'''
     # ---------------------
 
     # async def ping(client, message): ---> __main__.py
-    PING = '<i>Sᴛᴀʀᴛɪɴɢ Pɪɴɢ..</i>'
-    PING_VALUE = '<b>Pᴏɴɢ</b>\n<code>{value} ᴍs..</code>'
+    PING = '<i>Tes ping........</i>'
+    PING_VALUE = '<b>Bot aktive✅</b>\n<code>{value} ᴍs..</code>'
     # ---------------------
 
     # async def onDownloadStart(self): --> tasks_listener.py
-    LINKS_START = """<blockquote><b><i>Tᴀsᴋ Sᴛᴀʀᴛᴇᴅ</i></b>
+    LINKS_START = """<blockquote><b><i>Tugas di mulai</i></b>
 • <b>Mᴏᴅᴇ:</b> {Mode}
 • <b>Bʏ:</b> {Tag}\n\n"""
-    LINKS_SOURCE = """➲Sᴏᴜʀᴄᴇ <b>:</b>
-• <b>Aᴅᴅᴇᴅ Oɴ:</b> {On}</blockquote>
+    LINKS_SOURCE = """➲Sumber <b>:</b>
+• <b>Ditambahkan pada :</b> {On}</blockquote>
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬
 {Source}
 ▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬▬\n\n"""
@@ -136,35 +137,35 @@ class WZMLStyle:
 
     # async def onUploadComplete(): ---> tasks_listener.py
     NAME =                  '<b><i>{Name}</i></b>\n\n'
-    SIZE =                  '<blockquote>• <b>Sɪᴢᴇ      : </b>{Size}\n'
-    ELAPSE =                '• <b>Eʟᴀᴘsᴇᴅ   : </b>{Time}\n'
-    MODE =                  '• <b>Mᴏᴅᴇ      : </b>{Mode}\n'
+    SIZE =                  '• <b>Ukuran</b> : {Size}\n'
+    ELAPSE =                '• <b>Waktu</b>: {Time}\n'
+    MODE =                  '• <b>Mode</b> : {Mode}\n'
 
     # ----- LEECH -------
-    L_TOTAL_FILES =         '• <b>Tᴏᴛᴀʟ Fɪʟᴇs       : </b>{Files}\n'
-    L_CORRUPTED_FILES =     '• <b>Cᴏʀʀᴜᴘᴛᴇᴅ Fɪʟᴇs   : </b>{Corrupt}\n'
-    L_CC =                  '• <b>Bʏ                : </b>{Tag}\n'
+    L_TOTAL_FILES =         '• <b>Total File</b> : {Files} Files\n'
+    L_CORRUPTED_FILES =     '• <b>File Rusak</b> : {Corrupt}\n'
+    L_CC =                  '• <b>Pengguna</b> : {Tag}\n'
     PM_BOT_MSG =            '➲ <b><i>File(s) sudah dikirim</i></b>'
     L_BOT_MSG =             '➲ <b><i>File dikirim ke PM</i></b>'
-    L_LL_MSG =              '➲ <b><i>File dikirim ke PM</i></b></blockquote>\n'
+    L_LL_MSG =              '➲ <b><i>Untuk menghindari penghapusan files berkala, segera amankan files Anda</i></b>\n'
     
     # ----- MIRROR -------
-    M_TYPE =                '• <b>Tʏᴘᴇ      : </b>{Mimetype}\n'
-    M_SUBFOLD =             '• <b>SᴜʙFᴏʟᴅᴇʀs: </b>{Folder}\n'
-    TOTAL_FILES =           '• <b>Fɪʟᴇs     : </b>{Files}\n'
-    RCPATH =                '• <b>Pᴀᴛʜ      : </b><code>{RCpath}</code>\n'
-    M_CC =                  '• <b>Bʏ        : </b>{Tag}\n'
+    M_TYPE =                '• <b>Type</b>: {Mimetype}\n'
+    M_SUBFOLD =             '• <b>Sub Folder</b> : {Folder}\n'
+    TOTAL_FILES =           '• <b>Total File</b> : {Files}\n'
+    RCPATH =                '• <b>Jalur Penyimpanan</b> : {RCpath}\n'
+    M_CC =                  '• <b>Pengguna</b> : {Tag}\n'
     M_BOT_MSG =             '➲ <b><i>Link download di kirim ke PM dan segera download file anda sebelum ada penghapusan berkala</b></blockquote>'
     # ----- BUTTONS -------
-    CLOUD_LINK =      '☁️ Cʟᴏᴜᴅ Lɪɴᴋ'
-    SAVE_MSG =        '📨 Sᴀᴠᴇ Mᴇssᴀɢᴇ'
+    CLOUD_LINK =      '☁️ Tautan Unduhan'
+    SAVE_MSG =        '📨 Simpan Pesan'
     RCLONE_LINK =     '♻️ RCʟᴏɴᴇ Lɪɴᴋ'
-    DDL_LINK =        '📎 {Serv} Lɪɴᴋ'
-    SOURCE_URL =      '🔐 Sᴏᴜʀᴄᴇ Lɪɴᴋ'
+    DDL_LINK =        '📎 Tautan {Serv} '
+    SOURCE_URL =      '🔐 Sumber Tautan'
     INDEX_LINK_F =    '🗂 Iɴᴅᴇx Lɪɴᴋ'
     INDEX_LINK_D =    '⚡ Iɴᴅᴇx Lɪɴᴋ'
-    VIEW_LINK =       '🌐 Vɪᴇᴡ Lɪɴᴋ'
-    CHECK_PM =        '📥 Vɪᴇᴡ ɪɴ Bᴏᴛ PM'
+    VIEW_LINK =       '🌐 Lihat Tautan'
+    CHECK_PM =        '📥 Lihat di PM bot'
     CHECK_LL =        '🖇 Vɪᴇᴡ ɪɴ Lɪɴᴋs Lᴏɢ'
     MEDIAINFO_LINK =  '📃 MᴇᴅɪᴀIɴғᴏ'
     SCREENSHOTS =     '🖼 SᴄʀᴇᴇɴSʜᴏᴛs'
@@ -172,7 +173,7 @@ class WZMLStyle:
 
     # def get_readable_message(): ---> bot_utilis.py
     ####--------OVERALL MSG HEADER----------
-    STATUS_NAME =       '• 📸 : <b><i>{Name}</i></b>'
+    STATUS_NAME =       '<code><b>{Name}</b></code>\n'
 
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n• 🔥 : {Bar}'

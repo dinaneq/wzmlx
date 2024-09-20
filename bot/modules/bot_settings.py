@@ -705,31 +705,39 @@ async def load_config():
 async def get_buttons(key=None, edit_type=None, edit_mode=None, mess=None):
     buttons = ButtonMaker()
     if key is None:
-        buttons.ibutton('Config Variables', "botset var")
-        buttons.ibutton('Private Files', "botset private")
+        buttons.ibutton('Konfigurasi', "botset var")
+        buttons.ibutton('File Pribadi', "botset private")
         buttons.ibutton('Qbit Settings', "botset qbit")
         buttons.ibutton('Aria2c Settings', "botset aria")
-        buttons.ibutton('Close', "botset close")
+        buttons.ibutton('Tutup', "botset close")
         msg = '<b><i>Bot Settings:</i></b>'
     elif key == 'var':
         for k in list(OrderedDict(sorted(config_dict.items())).keys())[START:10+START]:
             buttons.ibutton(k, f"botset editvar {k}")
-        buttons.ibutton('Back', "botset back")
-        buttons.ibutton('Close', "botset close")
+        buttons.ibutton('Kembali', "botset back")
+        buttons.ibutton('Tutup', "botset close")
         for x in range(0, len(config_dict)-1, 10):
             buttons.ibutton(f'{int(x/10)+1}', f"botset start var {x}", position='footer')
         msg = f'<b>Config Variables</b> | <b>Page: {int(START/10)+1}</b>'
     elif key == 'private':
-        buttons.ibutton('Back', "botset back")
-        buttons.ibutton('Close', "botset close")
-        msg = '''<u>Send any of these private files:</u>
+        buttons.ibutton('Kembali', "botset back")
+        buttons.ibutton('Tutup', "botset close")
+        msg = '''<b>Kirimkan salah satu file pribadi ini:🥰</b>
         
-<code>config.env, token.pickle, accounts.zip, list_drives.txt, categories.txt, shorteners.txt, cookies.txt, terabox.txt, .netrc or any other file!</code>
+✅ <code>config.env</code>
+✅ <code>token.pickle</code>
+✅ <code>accounts.zip</code>
+✅ <code>list_drives.txt</code>
+✅ <code>categories.txt</code>
+✅ <code>shorteners.txt</code>
+✅ <code>cookies.txt</code>
+✅ <code>terabox.txt</code>
+✅ <code>.netrc</code>or any other file
 
-<i>To delete private file send only the file name as text message with or without extension.</i>
-<b>NOTE:</b> Changing .netrc will not take effect for aria2c until restart.
+<i>Untuk menghapus file pribadi, kirimkan hanya nama file sebagai pesan teks dengan atau tanpa ekstensi.</i>
+<b>CATATAN:</b> Mengubah .netrc tidak akan berlaku untuk aria2c sampai restart.
 
-<b>Timeout:</b> 60 sec'''
+<b>Waktu Habis:</b> 60 Detik'''
     elif key == 'aria':
         for k in list(aria2_options.keys())[START:10+START]:
             buttons.ibutton(k, f"botset editaria {k}")
