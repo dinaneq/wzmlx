@@ -6,7 +6,7 @@ class WZMLStyle:
     ST_BN1_URL = 'https://telegram.me/PanindiaFilmZ'
     ST_BN2_NAME = '😘 Use Me'
     ST_BN2_URL = 'https://telegram.me/PanindiaFilmZ'
-    ST_MSG = '''<b>✨ 𝐏𝐈𝐅 ➔ Mirror & Leech</b>\n\nℹ️ I Can Upload Files, Links, Torrents, etc. to Telegram, Google Drive, DDL Servers and Rclone Supported Sites!\n\n'''
+    ST_MSG = '''Can Upload Files, Links, Torrents, etc. to Telegram, Google Drive, DDL Servers and Rclone Supported Sites!\n\n'''
     ST_BOTPM = '''<b>🕵️ Bot PM Initiated Successfully!\n\nℹ️ I will send all your files and links here.</b>'''
     ST_UNAUTH = '''<b>⚠️ Access Denied!</b>'''
     # ---------------------
@@ -16,15 +16,15 @@ class WZMLStyle:
     
 <b>⏰ Bot Uptime :</b> {bot_uptime}
 
-┎<b>💽 RAM</b>
+➢<b>💽 RAM</b>
 ➢{ram_bar} » ({ram}%)
-┖<b>U :</b> {ram_u} | <b>F :</b> {ram_f} | <b>T :</b> {ram_t}
+➢<b>U :</b> {ram_u} | <b>F :</b> {ram_f} | <b>T :</b> {ram_t}
 
-┎<b>👒 SWAP</b>
+➢<b>👒 SWAP</b>
 ➢{swap_bar} » ({swap}%)
-┖<b>U :</b> {swap_u} | <b>F :</b> {swap_f} | <b>T :</b> {swap_t}
+➢<b>U :</b> {swap_u} | <b>F :</b> {swap_f} | <b>T :</b> {swap_t}
 
-┎<b>📦 DISK</b>
+➢<b>📦 DISK</b>
 ➢{disk_bar} » ({disk}%)
 ➢<b>Total Disk Read :</b> {disk_read}
 ➢<b>Total Disk Write :</b> {disk_write}
@@ -88,19 +88,19 @@ class WZMLStyle:
     # ---------------------
 
     # async def restart(client, message): ---> __main__.py
-    RESTARTING = '<b>🔄 Restarting...</b>'
+    RESTARTING = '<i>🔄 Menyalakan Ulang...</i>'
     # ---------------------
 
     # async def restart_notification(): ---> __main__.py
-    RESTART_SUCCESS = '''<b>♻️ Restarted Successfully! 🎉</b>
+    RESTART_SUCCESS = '''<b>♻️ Bot berhasil di nyalakan! 🎉</b>
 
-➢<b>📅 Date:</b> {date}
-➢<b>⏰ Time:</b> {time}
-➢<b>🌍 TimeZone:</b> {timz}
-➢<b>🆔 Version:</b> {version}
+➢<b>📅 Tanggal:</b> {date}
+➢<b>⏰ Waktu:</b> {time}
+➢<b>🌍 ZonaWaktu:</b> {timz}
+➢<b>🆔 Versi:</b> {version}
 
 '''
-    RESTARTED = '''<b>🔄 Bot Restarted!</b>'''
+    RESTARTED = '''<b>🔄 Bot Merestart otomatis!</b>'''
     # ---------------------
 
     # async def ping(client, message): ---> __main__.py
@@ -109,19 +109,19 @@ class WZMLStyle:
     # ---------------------
 
     # async def onDownloadStart(self): --> tasks_listener.py
-    LINKS_START = """<b>🚧 Task Started</b>
+    LINKS_START = """<b>🚧 Tugas Dimulai</b>
 
-➢<b>💠 Mode:</b> {Mode}
-➢<b>👤 User:</b> {Tag}\n\n"""
-    LINKS_SOURCE = """➢<b>💡 Source:</b>
-➢<b>⏰ Time:</b> {On}
+➢<b>💠 Unggah:</b> {Mode}
+➢<b>👤 Pengguna:</b> {Tag}\n\n"""
+    LINKS_SOURCE = """➢<b>💡 Sumber:</b>
+➢<b>⏰ Waktu:</b> {On}
 ------------------------------------------
 {Source}
 ------------------------------------------\n\n"""
     
     # async def __msg_to_reply(self): ---> pyrogramEngine.py
-    L_PM_START =            "🏁 <b><u>Leech Started</u> :</b>\n\n<b>💡 Source :</b> <a href='{msg_link}'>Click Here</a>"
-    L_LOG_START =           "🏁 <b><u>Leech Started</u> :</b>\n\n➢<b>👤 User :</b> {mention}\n➢<b>🆔 ID :</b> <code>{uid}</code>\n➢<b>💡 Source :</b> <a href='{msg_link}'>Click Here</a>"
+    L_PM_START =            "🏁 <b><u>Leech Started</u> :</b>\n\n<b>💡 sumber :</b> <a href='{msg_link}'>Click Here</a>"
+    L_LOG_START =           "🏁 <b><u>Leech Started</u> :</b>\n\n➢<b>👤 User :</b> {mention}\n➢<b>🆔 ID :</b> <code>{uid}</code>\n➢<b>💡 sumber :</b> <a href='{msg_link}'>Click Here</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
     NAME =                  '➢<b>🏷️ Name:</b> <code>{Name}</code>\n'
@@ -161,18 +161,18 @@ class WZMLStyle:
 
     # def get_readable_message(): ---> bot_utilis.py
     ####--------OVERALL MSG HEADER----------
-    STATUS_NAME =       '➢<b></b> <code>{Name}</code>'
+    STATUS_NAME =       '<code>{Name}</code>\n'
 
     #####---------PROGRESSIVE STATUS-------
-    BAR =               '\n➢{Bar}'
-    PROCESSED =         '\n➢<b>🔄 Process:</b> <code>{Processed}</code>'
-    STATUS =            '\n➢<b>✨ Status:</b> <a href="{Url}">{Status}</a>'
-    ETA =                '\n➢<b>ETA:</b> <code>{Eta}</code>'
-    SPEED =             '\n➢<b>📶 Speed:</b> <code>{Speed}</code>'
-    ELAPSED =          '\n➢<b>Elapsed:</b> <code>{Elapsed}</code>'
-    ENGINE =            '\n➢<b>⚙️ Engine:</b> <code>{Engine}</code>'
-    STA_MODE =          '\n➢<b>💠 Mode:</b> {Mode}'
-    SEEDERS =           '\n➢<b>🌱:</b> <code>{Seeders}</code> | '
+    BAR =               '\n            {Bar}'
+    PROCESSED =         '\n➢<b>🔄 Ukuran       :</b> <code>{Processed}</code>'
+    STATUS =                                             '</b> <a href="{Url}">{Status}</a>'
+    ETA =                '\n➢<b>⏳ Perkiraan    :</b> <code>{Eta}</code>'
+    SPEED =             '\n➢<b>📶 Kecepatan :</b> <code>{Speed}</code>'
+    ELAPSED =          '\n➢<b>⏰ Berjalan      :</b> <code>{Elapsed}</code>'
+    ENGINE =            '\n➢<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
+    STA_MODE =          '\n➢<b>💠 Unggah      :</b> {Mode}'
+    SEEDERS =           '\n➢<b>🌱S/L:</b> <code>{Seeders}</code> | '
     LEECHERS =                                           '<b>🪢:</b> <code>{Leechers}</code>'
 
     ####--------SEEDING----------
@@ -184,14 +184,14 @@ class WZMLStyle:
     SEED_ENGINE =    '\n➢<b>⚙️ Engine:</b> <code>{Engine}</code>'
 
     ####--------NON-PROGRESSIVE + NON SEEDING----------
-    STATUS_SIZE =    '\n➢<b>💾 Size:</b> <code>{Size}</code>'
-    NON_ENGINE =     '\n➢<b>⚙️ Engine:</b> <code>{Engine}</code>'
+    STATUS_SIZE =    '\n➢<b>💾 Ukuran       :</b> <code>{Size}</code>'
+    NON_ENGINE =     '\n➢<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
 
     ####--------OVERALL MSG FOOTER----------
-    USER =              '\n➢<b>👤 User:</b> <code>{User}</code>'
+    USER =              '\n➢<b>👤 Pengguna   :</b> <code>{User}</code>'
     ID =                                                        ' | <code>{Id}</code>'
-    BTSEL =          '\n➢<b>✂️ Select:</b> {Btsel}'
-    CANCEL =         '\n➢<b>🚫</b> {Cancel}\n\n'
+    BTSEL =          '\n➢<b>✂️ Pilih:</b> {Btsel}'
+    CANCEL =         '\n\n➢<b>🚫</b> {Cancel}\n\n'
 
     ####------FOOTER--------
     FOOTER = '👑 <b><u>Bot Stats</u></b>\n'
