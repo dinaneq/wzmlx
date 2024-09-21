@@ -50,7 +50,7 @@ desp_dict = {'rcc': ['RCLone adalah program baris perintah untuk menyinkronkan f
 'usess': [f'Sesi Pengguna adalah sesi telegram yang digunakan untuk mengunduh konten pribadi dari saluran pribadi tanpa kompromi dalam privasi, dibangun dengan enkripsi. \n {"<b> Peringatan: </b> bot ini tidak diamankan. Kami sarankan meminta pemilik grup untuk mengatur repo resmi." if config_dict["UPSTREAM_REPO"] != "https://github.com/Jot4349/WZML-X-ADVANCE" else "Bot aman.Anda dapat menggunakan sesi ini dengan aman"}', 'Kirim string sesi Anda. \n <b> batas waktu: </b> 60 detik'],
 
 
-'split_size': ['Leech splits ukuran adalah ukuran untuk membagi file Leech sebelum mengunggah', f'send Leech split ukuran dalam ukuran yang nyaman, seperti 𝟸GB, 𝟻𝟶𝟶MB atau 𝟷.𝟺𝟼GB.\n <b> premium aktif: </b> {is_premium_user}.\n <b> batas waktu: </b> 60 detik '],
+'split_size': ['Leech splits ukuran adalah ukuran untuk membagi file Leech sebelum mengunggah', f'send Leech split ukuran dalam ukuran yang nyaman, seperti 𝟸GB, 𝟻𝟶𝟶MB atau 𝟷.𝟺𝟼GB.\n <b> premium aktif: </b> {IS_PREMIUM_USER}.\n <b> batas waktu: </b> 60 detik '],
 
 
 'ddl_servers': ['server ddl yang mengunggah file Anda ke hosting spesifik mereka', ''],
