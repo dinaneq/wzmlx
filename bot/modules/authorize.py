@@ -87,14 +87,14 @@ async def addSudo(client, message):
         id_ = reply_to.from_user.id
     if id_:
         if id_ in user_data and user_data[id_].get('is_sudo'):
-            msg = 'Already Sudo!'
+            msg = 'Dia sudah menjadi admin ! Tidak perlu di tambahkan lagi'
         else:
             update_user_ldata(id_, 'is_sudo', True)
             if DATABASE_URL:
                 await DbManger().update_user_data(id_)
-            msg = 'Promoted as Sudo'
+            msg = 'Hak admin sudah di berikan'
     else:
-        msg = "<i>Give User's ID or Reply to User's message of whom you want to Promote as Sudo</i>"
+        msg = "<i>Masukkan id pengguna atau balas pesannya untuk di berikan hak admin</i>"
     await sendMessage(message, msg)
 
 
@@ -112,7 +112,7 @@ async def removeSudo(client, message):
             update_user_ldata(id_, 'is_sudo', False)
             if DATABASE_URL:
                 await DbManger().update_user_data(id_)
-            msg = 'Demoted'
+            msg = 'Hak admin di cabut'
     else:
         msg = "<i>Give User's ID or Reply to User's message of whom you want to Demote</i>"
     await sendMessage(message, msg)
