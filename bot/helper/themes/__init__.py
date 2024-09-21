@@ -3,7 +3,7 @@ from os import listdir
 from importlib import import_module
 from random import choice as rchoice
 from bot import config_dict, LOGGER
-from bot.helper.themes import wzml_minimal
+from bot.helper.themes import wzml_minimal, wzml_icon, wzml_hide, wzml_ori, wzml_terbaru
 
 AVL_THEMES = {"minimal": wzml_minimal, "icon": wzml_icon, "terbaru": wzml_terbaru, "ori": wzml_ori, "hide": wzml_hide}
 for theme in listdir('bot/helper/themes'):
