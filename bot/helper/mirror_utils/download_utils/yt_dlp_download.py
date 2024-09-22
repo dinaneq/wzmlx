@@ -180,13 +180,13 @@ class YoutubeDLHelper:
                     return
             if self.is_playlist and (not ospath.exists(path) or len(listdir(path)) == 0):
                 self.__onDownloadError(
-                    "No video available to download from this playlist. Check logs for more details")
+                    "Tidak ada video yang tersedia untuk diunduh dari daftar putar ini. Periksa log untuk lebih jelasnya")
                 return
             if self.__is_cancelled:
                 raise ValueError
             async_to_sync(self.__listener.onDownloadComplete)
         except ValueError:
-            self.__onDownloadError("Download Stopped by User!")
+            self.__onDownloadError("Unduhan Dihentikan")
 
     async def add_download(self, link, path, name, qual, playlist, options):
         if playlist:
@@ -257,7 +257,7 @@ class YoutubeDLHelper:
             return
         added_to_queue, event = await is_queued(self.__listener.uid)
         if added_to_queue:
-            LOGGER.info(f"Added to Queue/Download: {self.name}")
+            LOGGER.info(f"Ditambahkan ke Antrean/Unduh: {self.name}")
             async with download_dict_lock:
                 download_dict[self.__listener.uid] = QueueStatus(
                     self.name, self.__size, self.__gid, self.__listener, 'dl')
@@ -279,7 +279,7 @@ class YoutubeDLHelper:
         self.__is_cancelled = True
         LOGGER.info(f"Cancelling Download: {self.name}")
         if not self.__downloading:
-            await self.__listener.onDownloadError("Download Cancelled by User!")
+            await self.__listener.onDownloadError("Pengunduhan Dibatalkan")
 
     def __set_options(self, options):
         options = options.split('|')
