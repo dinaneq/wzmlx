@@ -28,7 +28,7 @@ default_desp = {'AS_DOCUMENT' :  'Jenis unggahan file Telegram default. Defaultn
 'SAFE_MODE' :  'Sembunyikan Nama Tugas, Tautan Sumber, dan Pengindeksan Tautan leech untuk Tindakan Pencegahan Keamanan. Defaultnya adalah false',
 'SOURCE_LINK' :  'Tambahkan Tombol Ekstra Tautan Sumber apakah itu Tautan Magnet atau Tautan File atau Tautan DL. Defaultnya adalah false',
 'SHOW_EXTRA_CMDS' :  'Tambahkan Perintah Ekstra di samping Format Arg untuk -z atau -e. \n\n<b>PERINTAH: </b> /unzipxxx atau /zipxxx atau /uzx atau /zx',
-'BOT_THEME' :  'Tema Bot yang Akan Beralih. Untuk saat ini Tema Deafault yang Tersedia sangat minim. Anda dapat membuat Tema dan Tambah Anda sendiri.\nDefault nya "terbaru"\nTersedia Pilihan sbg berikut :\n \n•<code>hide</code>\n•<code>icon</code>\n•<cpde>minimal</code>\n•<code>ori</code>\n•<code>terbaru</code>',
+'BOT_THEME' :  'Tema Bot yang Akan Beralih. Anda dapat membuat Tema dan Tambah Anda sendiri.\n\nDefault nya "<b>terbaru</b>"\nTersedia Pilihan sbg berikut :\n \n•<code>hide</code>\n•<code>icon</code>\n•<code>minimal</code>\n•<code>ori</code>\n•<code>terbaru</code>',
 'USER_MAX_TASKS' :  'Batasi tugas Maksimum untuk pengguna grup pada satu waktu. gunakan Int',
 'DAILY_TASK_LIMIT' :  'Tugas maksimum yang dapat dilakukan pengguna dalam satu hari. gunakan Int',
 'DISABLE_DRIVE_LINK' :  'Nonaktifkan tombol tautan drive. Defaultnya adalah false. Boolean',
