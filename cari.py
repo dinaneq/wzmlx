@@ -39,9 +39,9 @@ marge_file_name = find_files_with_extension(root_folder, '.py')
 
 while True:
     # Meminta kata yang ingin dicari dari pengguna
-    user_input = input("\nMasukkan kata kunci (Gunakan '*' sebagai pengganti kata atau 'exit' untuk keluar): ")
+    user_input = input("\nMasukkan kata kunci (Gunakan '*' sebagai pengganti kata atau 'q' untuk keluar): ")
 
-    if user_input.lower() == 'exit':
+    if user_input.lower() == 'q':
         break
 
     # Memecah input berdasarkan '*' dan mencari semua kata
