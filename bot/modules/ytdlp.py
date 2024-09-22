@@ -82,7 +82,7 @@ class YtSelection:
         try:
             await wait_for(self.event.wait(), timeout=self.__timeout)
         except Exception:
-            await editMessage(self.__reply_to, 'Timed Out. Task has been cancelled!')
+            await editMessage(self.__reply_to, 'Waktu Habis. Tugas telah dibatalkan!')
             self.qual = None
             self.is_cancelled = True
             self.event.set()
