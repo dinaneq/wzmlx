@@ -2,10 +2,10 @@
 class WZMLStyle:
     # ----------------------
     # async def start(client, message) ---> __main__.py
-    ST_BN1_NAME = '🛠️ Updates'
-    ST_BN1_URL = 'https://telegram.me/PanindiaFilmZ'
-    ST_BN2_NAME = '😘 Use Me'
-    ST_BN2_URL = 'https://telegram.me/PanindiaFilmZ'
+    ST_BN1_NAME = 'Original Repo'
+    ST_BN1_URL = 'https://ouo.io/Sjev3s'
+    ST_BN2_NAME = 'Repo This bot'
+    ST_BN2_URL = 'https://ouo.io/r87GFB'
     ST_MSG = '''Can Upload Files, Links, Torrents, etc. to Telegram, Google Drive, DDL Servers and Rclone Supported Sites!\n\n'''
     ST_BOTPM = '''<b>🕵️ Bot PM Initiated Successfully!\n\nℹ️ I will send all your files and links here.</b>'''
     ST_UNAUTH = '''<b>⚠️ Access Denied!</b>'''
@@ -165,15 +165,15 @@ class WZMLStyle:
 
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n            {Bar}'
-    PROCESSED =         '\n➢<b>🔄 Ukuran       :</b> <code>{Processed}</code>'
+    PROCESSED =         '\n<b>🔄 Ukuran       :</b> <code>{Processed}</code>'
     STATUS =                                             '</b> <a href="{Url}">{Status}</a>'
-    ETA =                '\n➢<b>⏳ Perkiraan    :</b> <code>{Eta}</code>'
-    SPEED =             '\n➢<b>📶 Kecepatan :</b> <code>{Speed}</code>'
-    ELAPSED =          '\n➢<b>⏰ Berjalan      :</b> <code>{Elapsed}</code>'
-    ENGINE =            '\n➢<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
-    STA_MODE =          '\n➢<b>💠 Unggah      :</b> {Mode}'
-    SEEDERS =           '\n➢<b>🌱S/L:</b> <code>{Seeders}</code> | '
-    LEECHERS =                                           '<b>🪢:</b> <code>{Leechers}</code>'
+    ETA =                '\n<b>⏳ Perkiraan    :</b> <code>{Eta}</code>'
+    SPEED =             '\n<b>📶 Kecepatan :</b> <code>{Speed}</code>'
+    ELAPSED =          '\n<b>⏰ Berjalan      :</b> <code>{Elapsed}</code>'
+    ENGINE =            '\n<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
+    STA_MODE =          '\n<b>💠 Unggah      :</b> {Mode}'
+    SEEDERS =           '\n<b>🌱S/L               :</b> <code>{Seeders}</code> | '
+    LEECHERS =                                           '<b></b> <code>{Leechers}</code>'
 
     ####--------SEEDING----------
     SEED_SIZE =      '\n➢<b>💾 Size:</b> <code>{Size}</code>'
@@ -188,10 +188,10 @@ class WZMLStyle:
     NON_ENGINE =     '\n➢<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
 
     ####--------OVERALL MSG FOOTER----------
-    USER =              '\n➢<b>👤 Pengguna   :</b> <code>{User}</code>'
+    USER =              '\n<b>👤 Pengguna   :</b> <code>{User}</code>'
     ID =                                                        ' | <code>{Id}</code>'
-    BTSEL =          '\n➢<b>✂️ Pilih:</b> {Btsel}'
-    CANCEL =         '\n\n➢<b>🚫</b> {Cancel}\n\n'
+    BTSEL =          '\n<b>✂️ Pilih:</b> {Btsel}'
+    CANCEL =         '\n\n<b>🚫</b> {Cancel}\n\n'
 
     ####------FOOTER--------
     FOOTER = '👑 <b><u>Bot Stats</u></b>\n'
