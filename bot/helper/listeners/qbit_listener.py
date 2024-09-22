@@ -123,7 +123,7 @@ async def __qb_listener():
                         TORRENT_TIMEOUT = config_dict['TORRENT_TIMEOUT']
                         QbTorrents[tag]['stalled_time'] = time()
                         if TORRENT_TIMEOUT and time() - tor_info.added_on >= TORRENT_TIMEOUT:
-                            __onDownloadError("Dead Torrent!", tor_info)
+                            __onDownloadError("Torent tidak dapat di unduh, seeder tidak ada!", tor_info)
                         else:
                             await sync_to_async(client.torrents_reannounce, torrent_hashes=tor_info.hash)
                     elif state == "downloading":
@@ -144,7 +144,7 @@ async def __qb_listener():
                             await sync_to_async(client.torrents_recheck, torrent_hashes=tor_info.hash)
                             QbTorrents[tag]['rechecked'] = True
                         elif TORRENT_TIMEOUT and time() - QbTorrents[tag]['stalled_time'] >= TORRENT_TIMEOUT:
-                            __onDownloadError("Dead Torrent!", tor_info)
+                            __onDownloadError("Torent tidak dapat di unduh, seeder tidak ada!!", tor_info)
                         else:
                             await sync_to_async(client.torrents_reannounce, torrent_hashes=tor_info.hash)
                     elif state == "missingFiles":
