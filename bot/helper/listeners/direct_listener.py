@@ -64,13 +64,13 @@ class DirectListener:
         if self.__is_cancelled:
             return
         if self.__failed == len(contents):
-            async_to_sync(self.__listener.onDownloadError, 'All files are failed to download!')
+            async_to_sync(self.__listener.onDownloadError, 'Semua file gagal diunduh!')
             return
         async_to_sync(self.__listener.onDownloadComplete)
 
     async def cancel_download(self):
         self.__is_cancelled = True
         LOGGER.info(f"Cancelling Download: {self.name}")
-        await self.__listener.onDownloadError("Download Cancelled by User!")
+        await self.__listener.onDownloadError("Pengunduhan Dibatalkan")
         if self.task:
             await sync_to_async(self.task.remove, force=True, files=True)
