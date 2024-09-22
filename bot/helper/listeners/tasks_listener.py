@@ -104,7 +104,7 @@ class MirrorLeechListener:
             pass
 
     def __setModeEng(self):
-        mode = f" #{'Leech' if self.isLeech else 'Clone' if self.isClone else 'RClone' if self.upPath not in ['gd', 'ddl'] else 'DDL' if self.upPath != 'gd' else 'GDrive'}"
+        mode = f" #{'Telegram' if self.isLeech else 'Clone' if self.isClone else 'Cloud' if self.upPath not in ['gd', 'ddl'] else 'DDL' if self.upPath != 'gd' else 'GDrive'}"
         mode += ' (Zip)' if self.compress else ' (Unzip)' if self.extract else ''
         mode += f" | #{'qBit' if self.isQbit else 'ytdlp' if self.isYtdlp else 'GDrive' if (self.isClone or self.isGdrive) else 'Mega' if self.isMega else 'Aria2' if self.source_url and self.source_url != self.message.link else 'Tg'}"
         self.upload_details['mode'] = mode
@@ -117,7 +117,7 @@ class MirrorLeechListener:
             if file is not None and file.media is not None:
                 mtype = file.media.value
                 media = getattr(file, mtype)
-                self.source_msg = f'┎ <b>Name:</b> <i>{media.file_name if hasattr(media, "file_name") else f"{mtype}_{media.file_unique_id}"}</i>\n• <b>Type:</b> {media.mime_type if hasattr(media, "mime_type") else "image/jpeg" if mtype == "photo" else "text/plain"}\n• <b>Size:</b> {get_readable_file_size(media.file_size)}\n• <b>Created Date:</b> {media.date}\n• <b>Media Type:</b> {mtype.capitalize()}'
+                self.source_msg = f' <b>Name:</b> <i>{media.file_name if hasattr(media, "file_name") else f"{mtype}_{media.file_unique_id}"}</i>\n• <b>Type:</b> {media.mime_type if hasattr(media, "mime_type") else "image/jpeg" if mtype == "photo" else "text/plain"}\n• <b>Size:</b> {get_readable_file_size(media.file_size)}\n• <b>Created Date:</b> {media.date}\n• <b>Media Type:</b> {mtype.capitalize()}'
             else:
                 self.source_msg = f"<code>{self.message.reply_to_message.text}</code>"
         elif self.source_url.startswith('https://t.me/share/url?url='):
@@ -133,7 +133,7 @@ class MirrorLeechListener:
                     else:
                         name += ('&' if amper else '') + check.replace('dn=', '').replace('+', ' ')
                         amper = True
-                self.source_msg = f"┎ <b>Name:</b> <i>{name}</i>\n• <b>Magnet Hash:</b> <code>{hashh}</code>\n• <b>Total Trackers:</b> {tracCount} \n• <b>Share:</b> <a href='https://t.me/share/url?url={quote(msg)}'>Share To Telegram</a>"
+                self.source_msg = f" <b>Name:</b> <i>{name}</i>\n• <b>Magnet Hash:</b> <code>{hashh}</code>\n• <b>Total Trackers:</b> {tracCount} \n• <b>Share:</b> <a href='https://t.me/share/url?url={quote(msg)}'>Share To Telegram</a>"
             else:
                 self.source_msg = f"<code>{msg}</code>"
         else:
@@ -177,9 +177,9 @@ class MirrorLeechListener:
             download = download_dict[self.uid]
             name = str(download.name()).replace('/', '')
             gid = download.gid()
-        LOGGER.info(f"Download Completed: {name}")
+        LOGGER.info(f"Pengunduhan Selesai: {name}")
         if multi_links:
-            await self.onUploadError('Downloaded! Starting other part of the Task...')
+            await self.onUploadError('Diunduh! Memulai bagian lain dari Tugas...')
             return
         if name == "None" or self.isQbit or not await aiopath.exists(f"{self.dir}/{name}"):
             try:
@@ -267,11 +267,11 @@ class MirrorLeechListener:
                                 return
                     else:
                         LOGGER.error(
-                            'Unable to extract archive! Uploading anyway')
+                            'Tidak dapat mengekstrak arsip! Tetap mengunggah')
                         self.newDir = ""
                         up_path = dl_path
             except NotSupportedExtractionArchive:
-                LOGGER.info("Not any valid archive, uploading file as it is.")
+                LOGGER.info("Bukan arsip yang valid, mengunggah file apa adanya.")
                 self.newDir = ""
                 up_path = dl_path
 
@@ -381,7 +381,7 @@ class MirrorLeechListener:
             up = len(non_queued_up)
             if (all_limit and dl + up >= all_limit and (not up_limit or up >= up_limit)) or (up_limit and up >= up_limit):
                 added_to_queue = True
-                LOGGER.info(f"Added to Queue/Upload: {name}")
+                LOGGER.info(f"Ditambahkan ke Antrian/Unggah: {name}")
                 event = Event()
                 queued_up[self.uid] = event
         if added_to_queue:
@@ -392,7 +392,7 @@ class MirrorLeechListener:
             async with download_dict_lock:
                 if self.uid not in download_dict:
                     return
-            LOGGER.info(f'Start from Queued/Upload: {name}')
+            LOGGER.info(f'Mulai dari Antrian/Unggah: {name}')
         async with queue_dict_lock:
             non_queued_up.add(self.uid)
         if self.isLeech:
@@ -635,11 +635,11 @@ class MirrorLeechListener:
             if self.sameDir and self.uid in self.sameDir['tasks']:
                 self.sameDir['tasks'].remove(self.uid)
                 self.sameDir['total'] -= 1
-        msg = f'''<i><b>❌Download Stopped!❌</b></i>
-• <b>Task for:</b> {self.tag}
-• <b>Due To:</b> {escape(error)}
-• <b>Mode:</b> {self.upload_details['mode']}
-• <b>Elapsed:</b> {get_readable_time(time() - self.message.date.timestamp())}'''
+        msg = f'''<i><b>❌Unduhan Dihentikan!❌</b></i>
+• <b>Tugas Untuk    :</b> {self.tag}
+• <b>Penyebab       :</b> {escape(error)}
+• <b>Unggah         :</b> {self.upload_details['mode']}
+• <b>Selama         :</b> {get_readable_time(time() - self.message.date.timestamp())}'''
         await sendMessage(self.message, msg, button)
         if count == 0:
             await self.clean()
