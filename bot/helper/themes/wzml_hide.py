@@ -2,13 +2,13 @@
 class WZMLStyle:
     # ----------------------
     # async def start(client, message) ---> __main__.py
-    ST_BN1_NAME = '🛠️ Updates'
-    ST_BN1_URL = 'https://telegram.me/PanindiaFilmZ'
-    ST_BN2_NAME = '😘 Use Me'
-    ST_BN2_URL = 'https://telegram.me/PanindiaFilmZ'
-    ST_MSG = '''Dapat Mengunggah File, Tautan, Torrent, dll. ke Telegram, Google Drive, Server DDL, dan Situs yang Didukung Rclone!\n\n'''
-    ST_BOTPM = '''Bot PM Berhasil Dimulai!\n\nℹ️ Saya akan mengirimkan semua file dan tautan Anda di sini.'''
-    ST_UNAUTH = '''<b>⚠️ Akses di tolak</b>'''
+    ST_BN1_NAME = 'Original Repo'
+    ST_BN1_URL = 'https://ouo.io/Sjev3s'
+    ST_BN2_NAME = 'Repo This bot'
+    ST_BN2_URL = 'https://ouo.io/r87GFB'
+    ST_MSG = '''Dapat mengunggah file, tautan, torrents, dll. Untuk Telegram, Google Drive, server DDL dan situs yang didukung RCLone!\n\n'''
+    ST_BOTPM = '''<b>🕵️ Bot PM berhasil dimulai! \n\nℹ️ Saya akan mengirim semua file dan tautan Anda di sini</b>.'''
+    ST_UNAUTH = '''<b>⚠️ Akses ditolak!</b>'''
     # ---------------------
 
     # async def stats(client, message):
@@ -16,15 +16,15 @@ class WZMLStyle:
     
 <b>⏰ Bot Uptime :</b> {bot_uptime}
 
-➢<b>💽 RAM</b>
+<b>💽 RAM</b>
 ➢{ram_bar} » ({ram}%)
 ➢<b>U :</b> {ram_u} | <b>F :</b> {ram_f} | <b>T :</b> {ram_t}
 
-➢<b>👒 SWAP</b>
+<b>👒 SWAP</b>
 ➢{swap_bar} » ({swap}%)
 ➢<b>U :</b> {swap_u} | <b>F :</b> {swap_f} | <b>T :</b> {swap_t}
 
-➢<b>📦 DISK</b>
+<b>📦 DISK</b>
 ➢{disk_bar} » ({disk}%)
 ➢<b>Total Disk Read :</b> {disk_read}
 ➢<b>Total Disk Write :</b> {disk_write}
@@ -35,11 +35,11 @@ class WZMLStyle:
     '''
     SYS_STATS = '''<b>🛠 <u>𝙎𝙮𝙨𝙩𝙚𝙢 𝙎𝙩𝙖𝙩𝙞𝙨𝙩𝙞𝙘𝙨</u></b>
     
-➢<b>⏰ OS Uptime :</b> {os_uptime}
-➢<b>☢️ OS Info :</b> {os_version}
+<b>⏰ OS Uptime :</b> {os_uptime}
+<b>☢️ OS Info :</b> {os_version}
 ➢<b>🔧 OS Arch :</b> {os_arch}
 
-➢<b>🖥️ CPU</b>
+<b>🖥️ CPU</b>
 ➢{cpu_bar} » ({cpu}%)
 ➢<b>Frequency :</b> {cpu_freq}
 ➢<b>Average Load :</b> {sys_load}
@@ -47,7 +47,7 @@ class WZMLStyle:
 ➢<b>Total Cores :</b> {total_core}
 ➢<b>Usable CPUs :</b> {cpu_use}
 
-➢<b>📶 Network Stats</b>
+<b>📶 Network Stats</b>
 ➢<b>Upload Data:</b> {up_data}
 ➢<b>Download Data:</b> {dl_data}
 ➢<b>Pkts Sent:</b> {pkt_sent}k
@@ -58,10 +58,10 @@ class WZMLStyle:
     '''
     REPO_STATS = '''<b>🧑‍💻 <u>𝙍𝙚𝙥𝙤 𝙎𝙩𝙖𝙩𝙞𝙨𝙩𝙞𝙘𝙨</u></b>
     
-➢<b>♻️ Bot Updated :</b> {last_commit}
-➢<b>🆔 Current Version :</b> {bot_version}
-➢<b>🎈 Latest Version :</b> {lat_version}
-➢<b>📝 ChangeLog :</b> {commit_details}
+<b>♻️ Bot Terupdate :</b> {last_commit}
+<b>🆔 Versi Saat ini :</b> {bot_version}
+<b>🎈 Versi Terbaru :</b> {lat_version}
+<b>📝 Log Perubahan :</b> {commit_details}
 
 <b>💥 REMARKS :</b> <code>{remarks}</code>
 
@@ -69,19 +69,19 @@ class WZMLStyle:
     '''
     BOT_LIMITS = '''<b>❗<u>𝘽𝙤𝙩 𝙇𝙞𝙢𝙞𝙩𝙨</u></b>
     
-➢<b>🎯 Direct :</b> <code>{DL} GB</code>
-➢<b>🧲 Torrent :</b> <code>{TL} GB</code>
-➢<b>☁️ GDrive :</b> <code>{GL} GB</code>
-➢<b>📺 YT-DLP :</b> <code>{YL} GB</code>
-➢<b>🎥 Playlist :</b> <code>{PL} Videos</code>
-➢<b>Ⓜ️ Mega :</b> <code>{ML} GB</code>
-➢<b>🎗️ Clone :</b> <code>{CL} GB</code>
-➢<b>📂 Leech :</b> <code>{LL} GB</code>
+<b>🎯 Direct :</b> <code>{DL} GB</code>
+<b>🧲 Torrent :</b> <code>{TL} GB</code>
+<b>☁️ GDrive :</b> <code>{GL} GB</code>
+<b>📺 YT-DLP :</b> <code>{YL} GB</code>
+<b>🎥 Playlist :</b> <code>{PL} Videos</code>
+<b>Ⓜ️ Mega :</b> <code>{ML} GB</code>
+<b>🎗️ Clone :</b> <code>{CL} GB</code>
+<b>📂 Leech :</b> <code>{LL} GB</code>
 
-➢<b>🔑 Token Validity :</b> {TV}
-➢<b>🐢 Timeout :</b> {UTI}
-➢<b>👤 User Tasks :</b> {UT}
-➢<b>🚧 Total Tasks :</b> {BT}
+<b>🔑 Token Validity :</b> {TV}
+<b>🐢 Timeout :</b> {UTI}
+<b>👤 User Tasks :</b> {UT}
+<b>🚧 Total Tasks :</b> {BT}
 
 
     '''
@@ -94,67 +94,67 @@ class WZMLStyle:
     # async def restart_notification(): ---> __main__.py
     RESTART_SUCCESS = '''<b>♻️ Bot berhasil di nyalakan! 🎉</b>
 
-➢<b>📅 Tanggal:</b> {date}
-➢<b>⏰ Waktu:</b> {time}
-➢<b>🌍 ZonaWaktu:</b> {timz}
-➢<b>🆔 Versi:</b> {version}
+<b>📅 Tanggal:</b> {date}
+<b>⏰ Waktu:</b> {time}
+<b>🌍 ZonaWaktu:</b> {timz}
+<b>🆔 Versi:</b> {version}
 
 '''
     RESTARTED = '''<b>🔄 Bot Merestart otomatis!</b>'''
     # ---------------------
 
     # async def ping(client, message): ---> __main__.py
-    PING = '<b>🙄 Memulai ping...</b>'
+    PING = '<b>🙄 Starting Ping...</b>'
     PING_VALUE = '<b>🏓 Pong:</b> <code>{value}ms</code>'
     # ---------------------
 
     # async def onDownloadStart(self): --> tasks_listener.py
     LINKS_START = """<b>🚧 Tugas Dimulai</b>
 
-➢<b>💠 Unggah:</b> {Mode}
-➢<b>👤 Pengguna:</b> {Tag}\n\n"""
-    LINKS_SOURCE = """➢<b>💡 Sumber:</b>
-➢<b>⏰ Waktu:</b> {On}
+<b>💠 Unggah:</b> {Mode}
+<b>👤 Pengguna:</b> {Tag}\n\n"""
+    LINKS_SOURCE = """<b>💡 Sumber:</b>
+<b>⏰ Waktu:</b> {On}
 ------------------------------------------
 {Source}
 ------------------------------------------\n\n"""
     
     # async def __msg_to_reply(self): ---> pyrogramEngine.py
-    L_PM_START =            "🏁 <b><u>Leech Started</u> :</b>\n\n<b>💡 sumber :</b> <a href='{msg_link}'>Click Here</a>"
-    L_LOG_START =           "🏁 <b><u>Leech Started</u> :</b>\n\n➢<b>👤 User :</b> {mention}\n➢<b>🆔 ID :</b> <code>{uid}</code>\n➢<b>💡 sumber :</b> <a href='{msg_link}'>Click Here</a>"
+    L_PM_START =            "🏁 <b><u>Leech Dimulai</u> :</b>\n\n<b>💡 sumber :</b> <a href='{msg_link}'>Klik Disini</a>"
+    L_LOG_START =           "🏁 <b><u>Leech Dimulai</u> :</b>\n\n➢<b>👤 Pengguna :</b> {mention}\n➢<b>🆔 ID :</b> <code>{uid}</code>\n➢<b>💡 Sumber :</b> <a href='{msg_link}'>Click Here</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
-    NAME =                  '➢<b>🏷️ Name:</b> <code>{Name}</code>\n'
-    SIZE =                  '➢<b>💾 Size: </b>{Size}\n'
-    ELAPSE =                '➢<b>⌛ Elapsed: </b>{Time}\n'
-    MODE =                  '➢<b>💠 Mode: </b>{Mode}\n'
+    NAME =                  '<code>{Name}</code>\n\n'
+    SIZE =                  '<b>💾 Ukuran: </b>{Size}\n'
+    ELAPSE =                '<b>⌛ Perkiraan: </b>{Time}\n'
+    MODE =                  '<b>💠 Unggah: </b>{Mode}\n'
 
     # ----- LEECH -------
-    L_TOTAL_FILES =         '➢<b>📂 Total Files: </b>{Files}\n'
-    L_CORRUPTED_FILES =     '➢<b>💀 Corrupted Files: </b>{Corrupt}\n'
-    L_CC =                  '➢<b>👤 User: </b>{Tag}\n\n'
-    PM_BOT_MSG =            'ℹ️ <b><i>Files have been Sent Above!</i></b>'
-    L_BOT_MSG =             'ℹ️ <b><i>Files have been Sent in Bot PM!</i></b>'
-    L_LL_MSG =              'ℹ️ <b><i>Files have been Sent. Access via Links!</i></b>'
+    L_TOTAL_FILES =         '<b>📂 Total Files: </b>{Files}\n'
+    L_CORRUPTED_FILES =     '<b>💀 File Rusak: </b>{Corrupt}\n'
+    L_CC =                  '<b>👤 Pengguna: </b>{Tag}\n\n'
+    PM_BOT_MSG =            'ℹ️ <b><i>File telah dikirim!</i></b>'
+    L_BOT_MSG =             'ℹ️ <b><i>File telah dikirim dalam bot PM!</i></b>'
+    L_LL_MSG =              'ℹ️ <b><i>File telah dikirim.Akses melalui tautan!</i></b>'
     
     # ----- MIRROR -------
-    M_TYPE =                '➢<b>📜 Type: </b>{Mimetype}\n'
-    M_SUBFOLD =             '➢<b>🗂️ SubFolders: </b>{Folder}\n'
-    TOTAL_FILES =           '➢<b>📂 Files: </b>{Files}\n'
-    RCPATH =                '➢<b>🚩 Path: </b><code>{RCpath}</code>\n'
-    M_CC =                  '➢<b>👤 User: </b>{Tag}\n\n'
-    M_BOT_MSG =             '🏁 <b><i>Links have been Sent in DM!</i></b>'
+    M_TYPE =                '<b>📜 Jenis File: </b>{Mimetype}\n'
+    M_SUBFOLD =             '<b>🗂️ SubFolders: </b>{Folder}\n'
+    TOTAL_FILES =           '<b>📂 Files: </b>{Files}\n'
+    RCPATH =                '<b>🚩 Path: </b><code>{RCpath}</code>\n'
+    M_CC =                  '<b>👤 Pengguna: </b>{Tag}\n\n'
+    M_BOT_MSG =             '🏁 <b><i>Tautan telah dikirim dalam DM!!</i></b>'
     
     # ----- BUTTONS -------
-    CLOUD_LINK =      '☁️ Cloud Link'
-    SAVE_MSG =        '📩 Save'
+    CLOUD_LINK =      '☁️ Unduh Disinj'
+    SAVE_MSG =        '📩 Simpan'
     RCLONE_LINK =     '®️ RClone Link'
     DDL_LINK =        '🚀 {Serv} Link'
-    SOURCE_URL =      '💡 Source'
+    SOURCE_URL =      '💡 Sumber'
     INDEX_LINK_F =    '🚀 Index Link'
     INDEX_LINK_D =    '🚀 Index Link'
-    VIEW_LINK =       '🌐 View Link'
-    CHECK_PM =        '🕵️ View in Bot PM'
+    VIEW_LINK =       '🌐 Lihat Tautan'
+    CHECK_PM =        '🕵️ Lihat di PM bot'
     CHECK_LL =        '📦 View in Dump'
     MEDIAINFO_LINK =  '📜 MediaInfo'
     # ---------------------
@@ -165,33 +165,33 @@ class WZMLStyle:
 
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n            {Bar}'
-    PROCESSED =         '\n➢<b>🔄 Ukuran       :</b> <code>{Processed}</code>'
+    PROCESSED =         '\n<b>🔄 Ukuran       :</b> <code>{Processed}</code>'
     STATUS =                                             '</b> <a href="{Url}">{Status}</a>'
-    ETA =                '\n➢<b>⏳ Perkiraan    :</b> <code>{Eta}</code>'
-    SPEED =             '\n➢<b>📶 Kecepatan :</b> <code>{Speed}</code>'
-    ELAPSED =          '\n➢<b>⏰ Berjalan      :</b> <code>{Elapsed}</code>'
-    ENGINE =            '\n➢<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
-    STA_MODE =          '\n➢<b>💠 Unggah      :</b> {Mode}'
-    SEEDERS =           '\n➢<b>🌱S/L:</b> <code>{Seeders}</code> | '
-    LEECHERS =                                           '<b>🪢:</b> <code>{Leechers}</code>'
+    ETA =                '\n<b>⏳ Perkiraan    :</b> <code>{Eta}</code>'
+    SPEED =             '\n<b>📶 Kecepatan :</b> <code>{Speed}</code>'
+    ELAPSED =          '\n<b>⏰ Berjalan      :</b> <code>{Elapsed}</code>'
+    ENGINE =            '\n<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
+    STA_MODE =          '\n<b>💠 Unggah      :</b> {Mode}'
+    SEEDERS =           '\n<b>🌱S/L               :</b> <code>{Seeders}</code> | '
+    LEECHERS =                                           '<b></b> <code>{Leechers}</code>'
 
     ####--------SEEDING----------
-    SEED_SIZE =      '\n➢<b>💾 Size:</b> <code>{Size}</code>'
-    SEED_SPEED =     '\n➢<b>📶 Speed:</b> <code>{Speed}</code> | '
+    SEED_SIZE =      '\n<b>💾 Size:</b> <code>{Size}</code>'
+    SEED_SPEED =     '\n<b>📶 Speed:</b> <code>{Speed}</code> | '
     UPLOADED =                                     '<b>Uploaded:</b> <code>{Upload}</code>'
-    RATIO =          '\n➢<b>🌀 Ratio:</b> <code>{Ratio}</code> | '
+    RATIO =          '\n<b>🌀 Ratio:</b> <code>{Ratio}</code> | '
     TIME =                                         '<b>Time:</b> <code>{Time}</code>'
-    SEED_ENGINE =    '\n➢<b>⚙️ Engine:</b> <code>{Engine}</code>'
+    SEED_ENGINE =    '\n<b>⚙️ Engine:</b> <code>{Engine}</code>'
 
     ####--------NON-PROGRESSIVE + NON SEEDING----------
-    STATUS_SIZE =    '\n➢<b>💾 Ukuran       :</b> <code>{Size}</code>'
-    NON_ENGINE =     '\n➢<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
+    STATUS_SIZE =    '\n<b>💾 Ukuran       :</b> <code>{Size}</code>'
+    NON_ENGINE =     '\n<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
 
     ####--------OVERALL MSG FOOTER----------
-    USER =              '\n➢<b>👤 Pengguna   :</b> <code>Mode Aman✅</code>'
+    USER =              '\n<b>👤 Pengguna   :</b> <code>Mode Aman👀</code>'
     ID =                                                        ' | <code>{Id}</code>'
-    BTSEL =          '\n➢<b>✂️ Pilih:</b> {Btsel}'
-    CANCEL =         '\n\n➢<b>🚫</b> {Cancel}\n\n'
+    BTSEL =          '\n<b>✂️ Pilih:</b> {Btsel}'
+    CANCEL =         '\n\n<b>🚫</b> {Cancel}\n\n'
 
     ####------FOOTER--------
     FOOTER = '👑 <b><u>Bot Stats</u></b>\n'
@@ -201,17 +201,17 @@ class WZMLStyle:
     FREE =                      '<b>📭 Free:</b> <code>{free}</code>'
     Ram = '\n➢<b>💿 RAM:</b> <code>{ram}%</code> | '
     uptime =                     '<b>⏰ Uptime:</b> <code>{uptime}</code>'
-    DL = '\n➢<b>🔻 DL:</b> <code>{DL}/s</code> | '
+    DL = '\n<b>🔻 DL:</b> <code>{DL}/s</code> | '
     UL =                        '<b>🔺 UL:</b> <code>{UL}/s</code>'
 
     ###--------BUTTONS-------
     PREVIOUS = '⏪'
-    REFRESH = '📑 Page: {Page}'
+    REFRESH = '📑 Halaman : {Page}'
     NEXT = '⏭️'
     # ---------------------
 
     #STOP_DUPLICATE_MSG: ---> clone.py, aria2_listener.py, task_manager.py
-    STOP_DUPLICATE = '<b>🏷️ Name:</b> <code>{content}</code>\n<b>⚠️ This File/Folder is already available in Drive!</b>\n\n<b>📑 List Results:</b>'
+    STOP_DUPLICATE = '<b>🏷️ Nama:</b> <code>{content}</code>\n<b>⚠️ File/folder ini sudah tersedia di drive!</b>\n\n<b>📑 Daftar Hasilnya:</b>'
     # ---------------------
 
     # async def countNode(_, message): ----> gd_count.py
@@ -225,13 +225,13 @@ class WZMLStyle:
     # ---------------------
 
     # LIST ---> gd_list.py
-    LIST_SEARCHING = '<b>🔍 Searching:</b> <code>{NAME}</code>'
-    LIST_FOUND = '<b>ℹ️ Found {NO} Results For</b> <code>{NAME}</code>'
-    LIST_NOT_FOUND = '<b>☹️ No Results Found For</b> <code>{NAME}</code>'
+    LIST_SEARCHING = '<b>🔍 Mencari :</b> <code>{NAME}</code>'
+    LIST_FOUND = '<b>ℹ️ Ditemukan {NO} Hasil untuk </b> <code>{NAME}</code>'
+    LIST_NOT_FOUND = '<b>☹️ Tidak di temukan </b> <code>{NAME}</code>'
     # ---------------------
 
     # async def mirror_status(_, message): ----> status.py
-    NO_ACTIVE_DL = '''<b>💩 No Active Tasks!</b>
+    NO_ACTIVE_DL = '''<b>💩 Tidak ada tugas yg sedang berjalan</b>
     
 👑 <b><u>Bot Stats</u></b>
 ➢<b>🖥️ CPU:</b> <code>{cpu}%</code> | <b>💿 RAM:</b> <code>{ram}%</code>
@@ -240,21 +240,21 @@ class WZMLStyle:
     # ---------------------
 
     # USER Setting --> user_setting.py 
-    USER_SETTING = '''㊂ <b><u>User Settings</u></b>
+    USER_SETTING = '''㊂ <b><u>Pengaturan Pengguna</u></b>
         
-➢<b>👤 Name :</b> {NAME}
-➢<b>🔖 Username :</b> {USERNAME}
+➢<b>👤 Nama :</b> {NAME}
+➢<b>🔖 NamaPengguna :</b> {USERNAME}
 ➢<b>🆔 ID :</b> <code>{ID}</code>
 ➢<b>🔮 DC :</b> <code>{DC}</code>
-➢<b>🗣️ Language :</b> <code>{LANG}</code>
+➢<b>🗣️ Bahasa :</b> <code>{LANG}</code>
 
 '''
 
-    UNIVERSAL = '''㊂ <b><u>Universal</u></b>
+    UNIVERSAL = '''㊂ <b><u>Umum</u></b>
 
 ➢<b>📺 YT-DLP Options :</b> <code>{YT}</code>
-➢<b>🚧 Daily Tasks :</b> <code>{DT}</code> per day
-➢<b>🟢 Last Used :</b> <code>{LAST_USED}</code>
+➢<b>🚧 Tugas Harian :</b> <code>{DT}</code> per hari
+➢<b>🟢 Terakhir Digunakan :</b> <code>{LAST_USED}</code>
 ➢<b>📜 MediaInfo :</b> <code>{MEDIAINFO}</code>
 ➢<b>🕵️ Bot PM :</b> <code>{BOT_PM}</code>
 ➢<b>📩 Save Mode :</b> <code>{SAVE_MODE}</code>
@@ -263,7 +263,7 @@ class WZMLStyle:
 
     MIRROR = '''㊂ <b><u>Mirror/Clone</u></b>
 
-➢<b>☁️ Daily Mirror :</b> <code>{DM}</code> per day</i>
+➢<b>☁️ Mirror Harian:</b> <code>{DM}</code> per hari</i>
 ➢<b>Ⓟ Prefix :</b> <code>{MPREFIX}</code>
 ➢<b>Ⓢ Suffix :</b> <code>{MSUFFIX}</code>
 ➢<b>🌈 Remname :</b> <code>{MREMNAME}</code>
@@ -276,7 +276,7 @@ class WZMLStyle:
 
     LEECH = '''㊂ <b><u>Leech Settings</u></b>
 
-➢<b>📂 Daily Leech  : </b><code>{DL}</code> per day
+➢<b>📂 Leech Harian  : </b><code>{DL}</code> per hari
 ➢<b>⚙️ Leech Type :</b> <code>{LTYPE}</code>
 ➢<b>🖼️ Thumbnail :</b> <code>{THUMB}</code>
 ➢<b>♈ Split Size :</b> <code>{SPLIT_SIZE}</code>
