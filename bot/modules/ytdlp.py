@@ -109,7 +109,7 @@ class YtSelection:
             buttons.ibutton('Best Audios', 'ytq ba/b')
             buttons.ibutton('Cancel', 'ytq cancel', 'footer')
             self.__main_buttons = buttons.build_menu(3)
-            msg = f'Choose Playlist Videos Quality:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
+            msg = f'Pilih Kualitas Video Daftar Putar: \nWaktu habis: {get_readable_time(self.__timeout-(time()-self.__time))}'
         else:
             format_dict = result.get('formats')
             if format_dict is not None:
@@ -150,10 +150,10 @@ class YtSelection:
                     else:
                         buttons.ibutton(b_name, f'ytq dict {b_name}')
             buttons.ibutton('MP3', 'ytq mp3')
-            buttons.ibutton('Audio Formats', 'ytq audio')
-            buttons.ibutton('Best Video', 'ytq bv*+ba/b')
-            buttons.ibutton('Best Audio', 'ytq ba/b')
-            buttons.ibutton('Cancel', 'ytq cancel', 'footer')
+            buttons.ibutton('Format Audio', 'ytq audio')
+            buttons.ibutton('Video terbaik', 'ytq bv*+ba/b')
+            buttons.ibutton('Audio Terbaik', 'ytq ba/b')
+            buttons.ibutton('Batal', 'ytq cancel', 'footer')
             self.__main_buttons = buttons.build_menu(2)
             msg = f'Choose Video Quality:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
         self.__reply_to = await sendMessage(self.__message, msg, self.__main_buttons)
@@ -164,9 +164,9 @@ class YtSelection:
 
     async def back_to_main(self):
         if self.__is_playlist:
-            msg = f'Choose Playlist Videos Quality:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
+            msg = f'Pilih Kualitas Video Daftar Putar: \nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
         else:
-            msg = f'Choose Video Quality:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
+            msg = f'Pilih Kualitas Video:\nWaktu habis: {get_readable_time(self.__timeout-(time()-self.__time))}'
         await editMessage(self.__reply_to, msg, self.__main_buttons)
 
     async def qual_subbuttons(self, b_name):
@@ -175,8 +175,8 @@ class YtSelection:
         for tbr, d_data in tbr_dict.items():
             button_name = f'{tbr}K ({get_readable_file_size(d_data[0])})'
             buttons.ibutton(button_name, f'ytq sub {b_name} {tbr}')
-        buttons.ibutton('Back', 'ytq back', 'footer')
-        buttons.ibutton('Cancel', 'ytq cancel', 'footer')
+        buttons.ibutton('Kembali', 'ytq back', 'footer')
+        buttons.ibutton('Batal', 'ytq cancel', 'footer')
         subbuttons = buttons.build_menu(2)
         msg = f'Choose Bit rate for <b>{b_name}</b>:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
         await editMessage(self.__reply_to, msg, subbuttons)
@@ -188,10 +188,10 @@ class YtSelection:
         for q in audio_qualities:
             audio_format = f'ba/b-mp3-{q}'
             buttons.ibutton(f'{q}K-mp3', f'ytq {audio_format}')
-        buttons.ibutton('Back', 'ytq back')
-        buttons.ibutton('Cancel', 'ytq cancel')
+        buttons.ibutton('Kembali', 'ytq back')
+        buttons.ibutton('Batal', 'ytq cancel')
         subbuttons = buttons.build_menu(3)
-        msg = f'Choose mp3 Audio{i} Bitrate:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
+        msg = f'Pilih Audio mp3{i} Bitrate:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
         await editMessage(self.__reply_to, msg, subbuttons)
 
     async def audio_format(self):
@@ -200,8 +200,8 @@ class YtSelection:
         for frmt in ['aac', 'alac', 'flac', 'm4a', 'opus', 'vorbis', 'wav']:
             audio_format = f'ba/b-{frmt}-'
             buttons.ibutton(frmt, f'ytq aq {audio_format}')
-        buttons.ibutton('Back', 'ytq back', 'footer')
-        buttons.ibutton('Cancel', 'ytq cancel', 'footer')
+        buttons.ibutton('Kembali', 'ytq back', 'footer')
+        buttons.ibutton('Batal', 'ytq cancel', 'footer')
         subbuttons = buttons.build_menu(3)
         msg = f'Choose Audio{i} Format:\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
         await editMessage(self.__reply_to, msg, subbuttons)
@@ -212,8 +212,8 @@ class YtSelection:
         for qual in range(11):
             audio_format = f'{format}{qual}'
             buttons.ibutton(qual, f'ytq {audio_format}')
-        buttons.ibutton('Back', 'ytq aq back')
-        buttons.ibutton('Cancel', 'ytq aq cancel')
+        buttons.ibutton('Kembali', 'ytq aq back')
+        buttons.ibutton('Batal', 'ytq aq cancel')
         subbuttons = buttons.build_menu(5)
         msg = f'Choose Audio{i} Quality:\n0 is best and 10 is worst\nTimeout: {get_readable_time(self.__timeout-(time()-self.__time))}'
         await editMessage(self.__reply_to, msg, subbuttons)
@@ -311,7 +311,7 @@ async def _ytdl(client, message, isLeech=False, sameDir=None, bulk=[]):
             if len(bulk) == 0:
                 raise ValueError('Bulk Empty!')
         except:
-            await sendMessage(message, 'Reply to text file or tg message that have links seperated by new line!')
+            await sendMessage(message, 'Membalas file teks atau pesan yang memiliki tautan yang dipisahkan oleh baris baru!')
             return
         b_msg = input_list[:1]
         b_msg.append(f'{bulk[0]} -i {len(bulk)}')
