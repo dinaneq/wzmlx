@@ -178,7 +178,7 @@ class WZMLStyle:
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n┃ {Bar}'
     PROCESSED =         '\n┠ <b>Processed:</b> {Processed}'
-    STATUS =                                           | '<b>Status:</b> <a href="{Url}">{Status}</a>'
+    STATUS =                                            '| <b>Status:</b> <a href="{Url}">{Status}</a>'
     ETA =               '\n┠ <b>ETA:</b> {Eta}'
     SPEED =             '\n┠ <b>Speed:</b> {Speed}'
     ELAPSED =           '\n┠ <b>Elapsed:</b> {Elapsed}'
