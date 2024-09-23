@@ -173,7 +173,7 @@ Token sementara bukan milik Anda! \nSilakan buat sendiri'''
 
     # def get_readable_message(): ---> bot_utilis.py
     ####--------OVERALL MSG HEADER----------
-    STATUS_NAME =       '<code><b>{Name}</b></code>\n'
+    STATUS_NAME =       '<blockquote><code><b>{Name}</b></code></blockquote>\n'
 
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n{Bar}'
