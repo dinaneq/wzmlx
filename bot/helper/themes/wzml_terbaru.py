@@ -161,7 +161,7 @@ class WZMLStyle:
 
     # def get_readable_message(): ---> bot_utilis.py
     ####--------OVERALL MSG HEADER----------
-    STATUS_NAME =       '<code>{Name}</code>\n'
+    STATUS_NAME =       '<blockquote><code>{Name}</code></blockquote>\n'
 
     #####---------PROGRESSIVE STATUS-------
     BAR =               '\n            {Bar}'
