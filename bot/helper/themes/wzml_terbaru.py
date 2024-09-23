@@ -124,9 +124,9 @@ class WZMLStyle:
     L_LOG_START =           "🏁 <b><u>Leech Dimulai</u> :</b>\n\n➢<b>👤 Pengguna :</b> {mention}\n➢<b>🆔 ID :</b> <code>{uid}</code>\n➢<b>💡 Sumber :</b> <a href='{msg_link}'>Click Here</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
-    NAME =                  '<code>{Name}</code>\n\n'
+    NAME =                  '<b>{Name}</b>\n\n'
     SIZE =                  '<b>💾 Ukuran: </b>{Size}\n'
-    ELAPSE =                '<b>⌛ Perkiraan: </b>{Time}\n'
+    ELAPSE =                '<b>⌛ Selsai: </b>{Time}\n'
     MODE =                  '<b>💠 Unggah: </b>{Mode}\n'
 
     # ----- LEECH -------
