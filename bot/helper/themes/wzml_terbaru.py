@@ -146,7 +146,7 @@ class WZMLStyle:
     M_BOT_MSG =             '🏁 <b><i>Tautan telah dikirim dalam DM!!</i></b>'
     
     # ----- BUTTONS -------
-    CLOUD_LINK =      '☁️ Unduh Disinj'
+    CLOUD_LINK =      '☁️ Unduh Disini'
     SAVE_MSG =        '📩 Simpan'
     RCLONE_LINK =     '®️ RClone Link'
     DDL_LINK =        '🚀 {Serv} Link'
