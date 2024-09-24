@@ -45,15 +45,15 @@ PAGE_NO      = 1
 
 
 class MirrorStatus:
-    STATUS_UPLOADING   = "📤Unggah..."
-    STATUS_DOWNLOADING = "📥Unduh..."
+    STATUS_UPLOADING   = "📤 Unggah..."
+    STATUS_DOWNLOADING = "📥 Unduh..."
     STATUS_CLONING     = "🔱Menggandakan..."
-    STATUS_QUEUEDL     = "⏳DL"
-    STATUS_QUEUEUP     = "⏳UP"
-    STATUS_PAUSED      = "⏸berhenti"
-    STATUS_ARCHIVING   = "🗃Membungkus..."
-    STATUS_EXTRACTING  = "⚒️Membongkar..."
-    STATUS_SPLITTING   = "✂Membagi..."
+    STATUS_QUEUEDL     = "⏳ AntrianUnduh"
+    STATUS_QUEUEUP     = "⏳AntrianUnggah"
+    STATUS_PAUSED      = "⏸ Berhenti"
+    STATUS_ARCHIVING   = "🗃 Membungkus..."
+    STATUS_EXTRACTING  = "⚒️ Membongkar..."
+    STATUS_SPLITTING   = "✂ Membagi..."
     STATUS_METADATA    = "Aᴅᴅɪɴɢ Mᴇᴛᴀᴅᴀᴛᴀ"
     STATUS_CHECKING    = "CʜᴇᴄᴋUᴘ"
     STATUS_SEEDING     = "Sᴇᴇᴅq"
@@ -116,7 +116,7 @@ def bt_selection_buttons(id_):
         buttons.ibutton("Pincode", f"btsel pin {gid} {pincode}")
     else:
         buttons.ubutton("Select Files", f"{BASE_URL}/app/files/{id_}?pin_code={pincode}")
-    buttons.ibutton("❌", f"btsel rm {gid} {id_}")
+    buttons.ibutton("Tutup", f"btsel rm {gid} {id_}")
     buttons.ibutton("Done Selecting", f"btsel done {gid} {id_}")
     return buttons.build_menu(2)
 
@@ -606,7 +606,7 @@ async def get_stats(event, key="home"):
                 UT = ('∞' if (val := config_dict['USER_MAX_TASKS']) == '' else val),
                 BT = ('∞' if (val := config_dict['BOT_MAX_TASKS']) == '' else val),
         )
-    btns.ibutton('❌', f'wzmlx {user_id} close')
+    btns.ibutton('Tutup', f'wzmlx {user_id} close')
     return msg, btns.build_menu(2)
 
 
@@ -758,7 +758,7 @@ async def set_commands(client):
             ),
             BotCommand(
                 BotCommands.HelpCommand,
-                'Seluruh informasi bot',
+                'Cara Menggunakan Bot',
             ),
             BotCommand(
                 BotCommands.UserSetCommand[0],
@@ -770,11 +770,11 @@ async def set_commands(client):
             ),
             BotCommand(
                 BotCommands.AniListCommand,
-                'Search Animes on AniList.com and fetch details',
+                'Mencari Anime on AniList.com and fetch details',
             ),
             BotCommand(
                 BotCommands.MyDramaListCommand,
-                'Search Dramas on MyDramaList.com and fetch details',
+                'Mencari drama di  MyDramaList.com and fetch details',
             ),
             BotCommand(
                 BotCommands.SpeedCommand[0],
