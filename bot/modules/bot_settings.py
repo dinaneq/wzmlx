@@ -429,7 +429,7 @@ async def load_config():
 
     BOT_THEME = environ.get('BOT_THEME', '')
     if len(BOT_THEME) == 0:
-        BOT_THEME = 'minimal'
+        BOT_THEME = 'terbaru'
 
     IMG_SEARCH = environ.get('IMG_SEARCH', '')
     IMG_SEARCH = (IMG_SEARCH.replace("'", '').replace('"', '').replace('[', '').replace(']', '').replace(",", "")).split()
@@ -467,7 +467,7 @@ async def load_config():
     SET_COMMANDS = SET_COMMANDS.lower() == 'true'
     
     SAFE_MODE = environ.get('SAFE_MODE', '')
-    SAFE_MODE = SAFE_MODE.lower() == 'true'
+    SAFE_MODE = SAFE_MODE.lower() == 'false'
     
     SCREENSHOTS_MODE = environ.get('SCREENSHOTS_MODE', '')
     SCREENSHOTS_MODE = SCREENSHOTS_MODE.lower() == 'true'
@@ -539,7 +539,7 @@ async def load_config():
     
     TIMEZONE = environ.get('TIMEZONE', '')
     if len(TIMEZONE) == 0:
-        TIMEZONE = 'Asia/Kolkata'
+        TIMEZONE = 'Asia/Jakarta'
         
     list_drives_dict.clear()
     if GDRIVE_ID:
