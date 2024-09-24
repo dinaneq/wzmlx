@@ -126,7 +126,7 @@ class WZMLStyle:
     # async def onUploadComplete(): ---> tasks_listener.py
     NAME =                  '<b>{Name}</b>\n\n'
     SIZE =                  '<b>💾 Ukuran: </b>{Size}\n'
-    ELAPSE =                '<b>⌛ Selsai: </b>{Time}\n'
+    ELAPSE =                '<b>⌛ Selesai: </b>{Time}\n'
     MODE =                  '<b>💠 Unggah: </b>{Mode}\n'
 
     # ----- LEECH -------
