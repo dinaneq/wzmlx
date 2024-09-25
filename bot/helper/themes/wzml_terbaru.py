@@ -210,10 +210,10 @@ class WZMLStyle:
     BOT_TASKS = '➢<b>🚧 Tasks:</b> <code>{Tasks}/{Ttask}</code> | <b>👷 Available:</b> <code>{Free}</code>\n'
     Cpu = '➢<b>🖥️ CPU:</b> <code>{cpu}%</code> | '
     FREE =                      '<b>📭 Free:</b> <code>{free}</code>'
-    Ram = '\n➢<b>💿 RAM:</b> <code>{ram}%</code> | '
-    uptime =                     '<b>⏰ Uptime:</b> <code>{uptime}</code>'
-    DL = '\n<b>🔻 DL:</b> <code>{DL}/s</code> | '
-    UL =                        '<b>🔺 UL:</b> <code>{UL}/s</code>'
+    Ram = '\n➢<b>💿 RAM:</b> <code>{ram}%</code> '
+    uptime = '\n➢<b>⏰ Uptime:</b> <code>{uptime}</code>'
+    DL = '\n<b>🚀Unduh:</b> <code>{DL}/s</code> • '
+    UL =                        '<b>🚀Unggah:</b> <code>{UL}/s</code>'
 
     ###--------BUTTONS-------
     PREVIOUS = '⏪'
