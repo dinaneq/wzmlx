@@ -9,6 +9,16 @@ class WZMLStyle:
     ST_MSG = '''Dapat mengunggah file, tautan, torrents, dll. Untuk Telegram, Google Drive, server DDL dan situs yang didukung RCLone!\n\n'''
     ST_BOTPM = '''<b>🕵️ Bot PM berhasil dimulai! \n\nℹ️ Saya akan mengirim semua file dan tautan Anda di sini</b>.'''
     ST_UNAUTH = '''<b>⚠️ Akses ditolak!</b>'''
+    LOG_DISPLAY_BT = '📑 Lihat Log'
+    WEB_PASTE_BT = '📨 Wᴇʙ Pᴀsᴛᴇ (SB)'
+    # ---------------------
+    # async def bot_help(client, message): ---> __main__.py
+    BASIC_BT = 'Dasar'
+    USER_BT = 'Pengguna'
+    MICS_BT = 'Lainnya'
+    O_S_BT = 'Pemilik & Admin'
+    CLOSE_BT = 'Tutup'
+    HELP_HEADER = "㊂ <b><i>Petunjuk menggunakan menu bantuan!</i></b>\n\n<b>Nᴏᴛᴇ: <i>Klik pada PERINTAH mana pun untuk melihat detail kecil lainnya.</i></b>"
     # ---------------------
 
     # async def stats(client, message):
