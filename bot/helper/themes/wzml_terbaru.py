@@ -134,7 +134,7 @@ class WZMLStyle:
     L_LOG_START =           "🏁 <b><u>Leech Dimulai</u> :</b>\n\n➢<b>👤 Pengguna :</b> {mention}\n➢<b>🆔 ID :</b> <code>{uid}</code>\n➢<b>💡 Sumber :</b> <a href='{msg_link}'>Click Here</a>"
 
     # async def onUploadComplete(): ---> tasks_listener.py
-    NAME =                  '<b>{Name}</b>\n\n'
+    NAME =                  '<blockquote><code>{Name}</code></blockquote>\n\n'
     SIZE =                  '<b>💾 Ukuran: </b>{Size}\n'
     ELAPSE =                '<b>⌛ Selesai: </b>{Time}\n'
     MODE =                  '<b>💠 Unggah: </b>{Mode}\n'
@@ -156,7 +156,7 @@ class WZMLStyle:
     M_BOT_MSG =             '🏁 <b><i>Tautan telah dikirim dalam DM!!</i></b>'
     
     # ----- BUTTONS -------
-    CLOUD_LINK =      '☁️ Unduh Disini'
+    CLOUD_LINK =      '♻️ Unduh'
     SAVE_MSG =        '📩 Simpan'
     RCLONE_LINK =     '®️ RClone Link'
     DDL_LINK =        '🚀 {Serv} Link'
