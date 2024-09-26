@@ -47,9 +47,9 @@ PAGE_NO      = 1
 class MirrorStatus:
     STATUS_UPLOADING   = "📤 Unggah..."
     STATUS_DOWNLOADING = "📥 Unduh..."
-    STATUS_CLONING     = "🔱Menggandakan..."
+    STATUS_CLONING     = "🔱 Menggandakan..."
     STATUS_QUEUEDL     = "⏳ AntrianUnduh"
-    STATUS_QUEUEUP     = "⏳AntrianUnggah"
+    STATUS_QUEUEUP     = "⏳ AntrianUnggah"
     STATUS_PAUSED      = "⏸ Berhenti"
     STATUS_ARCHIVING   = "🗃 Membungkus..."
     STATUS_EXTRACTING  = "⚒️ Membongkar..."
@@ -139,7 +139,7 @@ def handleIndex(index, dic):
     return index
     
 
-def get_progress_bar_string(pct):
+def get_progress_bar_stringORI(pct):
     pct = float(str(pct).strip('%'))
     p = min(max(pct, 0), 100)
     cFull = int(p // 8)
@@ -150,7 +150,7 @@ def get_progress_bar_string(pct):
     p_str += '◌' * (12 - cFull)
     return f"{p_str}"
     
-def get_progress_bar_stringMOD(pct):
+def get_progress_bar_string(pct):
     if isinstance(pct, str):
         pct = float(pct.strip("%"))
     p = min(
@@ -158,8 +158,8 @@ def get_progress_bar_stringMOD(pct):
         100
     )
     cFull = int(p // 10)
-    p_str = "🟢" * cFull
-    p_str += "⚪" * (10 - cFull)
+    p_str = "●" * cFull
+    p_str += "◌" * (10 - cFull)
     return f"{p_str}"
    
 
@@ -203,18 +203,18 @@ class EngineStatus:
         if not (version_cache := bot_cache.get('eng_versions')):
             get_all_versions()
             version_cache = bot_cache.get('eng_versions')
-        self.STATUS_ARIA = f"Aʀɪᴀ𝟸 v{version_cache['aria']}"
-        self.STATUS_AIOHTTP = f"AɪᴏHᴛᴛᴘ {version_cache['aiohttp']}"
-        self.STATUS_GD = f"Gᴏᴏɢʟᴇ-Aᴘɪ v{version_cache['gapi']}"
-        self.STATUS_MEGA = f"MᴇɢᴀSᴅᴋ v{version_cache['mega']}"
-        self.STATUS_QB = f"ǫBɪᴛ {version_cache['qbit']}"
-        self.STATUS_TG = f"PʏʀᴏMᴜʟᴛɪ v{version_cache['pyro']}"
-        self.STATUS_YT = f"Yᴛ-Dʟᴘ v{version_cache['ytdlp']}"
+        self.STATUS_ARIA = f"Aria2 v{version_cache['aria']}"
+        self.STATUS_AIOHTTP = f"AIOhttp {version_cache['aiohttp']}"
+        self.STATUS_GD = f"Google-API v{version_cache['gapi']}"
+        self.STATUS_MEGA = f"MEGA-sdk v{version_cache['mega']}"
+        self.STATUS_QB = f"QBit {version_cache['qbit']}"
+        self.STATUS_TG = f"PyroMulti v{version_cache['pyro']}"
+        self.STATUS_YT = f"Youtube v{version_cache['ytdlp']}"
         self.STATUS_EXT = "ᴘExᴛʀᴀᴄᴛ ᴠ𝟸"
-        self.STATUS_SPLIT_MERGE = f"FғMᴘᴇɢ v{version_cache['ffmpeg']}"
-        self.STATUS_ZIP = f"ᴘ𝟽Zɪᴘ v{version_cache['p7zip']}"
-        self.STATUS_QUEUE = "Sʟᴇᴇᴘ ᴠ𝟶"
-        self.STATUS_RCLONE = f"RCʟᴏɴᴇ {version_cache['rclone']}"
+        self.STATUS_SPLIT_MERGE = f"FFMpeg v{version_cache['ffmpeg']}"
+        self.STATUS_ZIP = f"p7zip v{version_cache['p7zip']}"
+        self.STATUS_QUEUE = "Sleep v0"
+        self.STATUS_RCLONE = f"Rclone {version_cache['rclone']}"
 
 
 def get_readable_message():
@@ -239,7 +239,7 @@ def get_readable_message():
             #msg += BotTheme('STATUS', Status=download.status(), Url=msg_link)
             msg += BotTheme('ETA', Eta=download.eta())
             #msg += BotTheme('SPEED', Speed=download.speed())
-            msg += BotTheme('ELAPSED', Elapsed=get_readable_time(elapsed))
+            #msg += BotTheme('ELAPSED', Elapsed=get_readable_time(elapsed))
             msg += BotTheme('ENGINE', Engine=download.eng())
             msg += BotTheme('STA_MODE', Mode=download.upload_details['mode'])
             if hasattr(download, 'seeders_num'):
@@ -265,8 +265,8 @@ def get_readable_message():
                         User=download.message.from_user.mention(style="html"))
         msg += BotTheme('ID', Id=download.message.from_user.id)
         if (download.eng()).startswith("qBit"):
-            msg += BotTheme('BTSEL', Btsel=f"/{BotCommands.BtSelectCommand}_{download.gid()}")
-        msg += BotTheme('CANCEL', Cancel=f"/{BotCommands.CancelMirror}_{download.gid()}")
+            msg += BotTheme('BTSEL', Btsel=f"/{BotCommands.BtSelectCommand}_SYD_{download.gid()}")
+        msg += BotTheme('CANCEL', Cancel=f"/{BotCommands.CancelMirror}_SYD_{download.gid()}")
 
     if len(msg) == 0:
         return None, None
