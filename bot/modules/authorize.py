@@ -72,9 +72,9 @@ async def unauthorize(client, message):
             update_user_ldata(id_, 'is_auth', False)
         if DATABASE_URL:
             await DbManger().update_user_data(id_)
-        msg = 'Pencabutan Ijin'
+        msg = 'Sukses mencabut Ijin🙏🙏'
     else:
-        msg = 'Ijin Sudah di cabut'
+        msg = 'Ijin Sudah di Cabut sebelum nya🤗'
     await sendMessage(message, msg)
 
 
