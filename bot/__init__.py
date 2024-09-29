@@ -206,6 +206,22 @@ LINKS_LOG_ID = '' if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
+#___________________________MODIF DISINI________________________________
+BAR_PENUH = environ.get('BAR_PENUH', '')
+if len(BAR_PENUH) == 0:
+    BAR_PENUH = '●'
+elif len(BAR_PENUH) > 1:
+    BAR_PENUH = BAR_PENUH[0]  # Ambil hanya karakter pertama
+
+
+BAR_KOSONG = environ.get('BAR_KOSONG', '')
+if len(BAR_KOSONG) == 0:
+    BAR_KOSONG = '◌'
+elif len(BAR_KOSONG) > 1:
+    BAR_KOSONG = BAR_KOSONG[0]  # Ambil hanya karakter pertama
+
+
+#__________________________AKHIR MOD____________________________
 
 LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
 if len(LEECH_LOG_ID) == 0:
@@ -603,6 +619,8 @@ if len(MDL_TEMPLATE) == 0:
 <a href='{url}'>Read More ...</a>'''
 
 config_dict = {'ANIME_TEMPLATE': ANIME_TEMPLATE,
+               'BAR_KOSONG' : BAR_KOSONG,
+               'BAR_PENUH' : BAR_PENUH,
                'AS_DOCUMENT': AS_DOCUMENT,
                'AUTHORIZED_CHATS': AUTHORIZED_CHATS,
                'AUTO_DELETE_MESSAGE_DURATION': AUTO_DELETE_MESSAGE_DURATION,
