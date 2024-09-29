@@ -32,9 +32,9 @@ START = 0
 STATE = 'view'
 handler_dict = {}
 default_values = {'AUTO_DELETE_MESSAGE_DURATION': 30,
-                  'DEFAULT_UPLOAD': 'gd'
-                  'BAR_KOSONG' : '◌',
-                  'BAR_PENUH' : '●',
+                  'DEFAULT_UPLOAD': 'gd',
+                  'BAR_KOSONG': '◌',
+                  'BAR_PENUH': '●',
                   'DOWNLOAD_DIR': '/usr/src/app/downloads/',
                   'LEECH_SPLIT_SIZE': MAX_SPLIT_SIZE,
                   'RSS_DELAY': 600,
