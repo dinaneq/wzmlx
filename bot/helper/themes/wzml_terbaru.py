@@ -153,7 +153,7 @@ class WZMLStyle:
     TOTAL_FILES =           '<b>📂 Files: </b>{Files}\n'
     RCPATH =                '<b>🚩 Path: </b><code>{RCpath}</code>\n'
     M_CC =                  '<b>👤 Pengguna: </b>{Tag}\n\n'
-    M_BOT_MSG =             '🏁 <b><i>Tautan telah dikirim dalam DM!!</i></b>'
+    M_BOT_MSG =             '🏁 <b><i>💥Tautan telah dikirim dalam DM!!</i></b>\n💥Segera amankan file anda, penghapusan/pembersihan drive tidak ada konfirmasi ke pemilik file🙏🙏🙏'
     
     # ----- BUTTONS -------
     CLOUD_LINK =      '♻️ Unduh'
