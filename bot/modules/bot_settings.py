@@ -300,16 +300,17 @@ async def load_config():
   #___________________________MODIF DISINI________________________________
     BAR_PENUH = environ.get('BAR_PENUH', '')
     if len(BAR_PENUH) == 0:
-    BAR_PENUH = '●'
+        BAR_PENUH = '●'  # Indentasi benar untuk blok if
     elif len(BAR_PENUH) > 1:
-    BAR_PENUH = BAR_PENUH[0]  # Ambil hanya karakter pertama
+        BAR_PENUH = BAR_PENUH[0]  # Ambil karakter pertama jika lebih dari 1 karakter
+ # Ambil hanya karakter pertama
 
 
     BAR_KOSONG = environ.get('BAR_KOSONG', '')
     if len(BAR_KOSONG) == 0:
-    BAR_KOSONG = '◌'
+        BAR_KOSONG = '◌'
     elif len(BAR_KOSONG) > 1:
-    BAR_KOSONG = BAR_KOSONG[0]  # Ambil hanya karakter pertama
+        BAR_KOSONG = BAR_KOSONG[0]  # Ambil hanya karakter pertama
 
 
 #__________________________AKHIR MOD____________________________
