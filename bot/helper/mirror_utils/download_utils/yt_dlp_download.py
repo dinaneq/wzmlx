@@ -279,7 +279,7 @@ class YoutubeDLHelper:
         self.__is_cancelled = True
         LOGGER.info(f"Cancelling Download: {self.name}")
         if not self.__downloading:
-            await self.__listener.onDownloadError("Pengunduhan Dibatalkan")
+            await self.__listener.onDownloadError("Dibatalkan Pengguna")
 
     def __set_options(self, options):
         options = options.split('|')
