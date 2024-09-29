@@ -115,7 +115,7 @@ class WZMLStyle:
 
     # async def ping(client, message): ---> __main__.py
     PING = '<b>🙄 Starting Ping...</b>'
-    PING_VALUE = '<b>🏓 Pong:</b> <code>{value}ms</code>'
+    PING_VALUE = '<b>Aktive ✅✅✅ \n</b> <code>{value}ms</code>'
     # ---------------------
 
     # async def onDownloadStart(self): --> tasks_listener.py
@@ -177,18 +177,18 @@ class WZMLStyle:
     STATUS =            '\n<b>{Status}</b>'
     BAR =               '          {Bar}'
     
-    PROCESSED =         '\n<b>🔄 Ukuran       :</b> <code>{Processed}</code>'
-    ETA =                '\n<b>⏳ Perkiraan    :</b> <code>{Eta}</code>'
-    SPEED =             '\n<b>📶 Kecepatan :</b> <code>{Speed}</code>'
-    ELAPSED =          '\n<b>⏰ Berjalan      :</b> <code>{Elapsed}</code>'
-    ENGINE =            '\n<b>⚙️ Mesin          :</b> <code>{Engine}</code>'
+    PROCESSED =         '\n<b>🔄 Ukuran       :</b> {Processed}'
+    ETA =                '\n<b>⏳ Perkiraan    :</b> {Eta}'
+    SPEED =             '\n<b>📶 Kecepatan :</b> {Speed}'
+    ELAPSED =          '\n<b>⏰ Berjalan      :</b> {Elapsed}'
+    ENGINE =            '\n<b>⚙️ Mesin          :</b> {Engine}'
     STA_MODE =          '\n<b>💠 Unggah      :</b> {Mode}'
-    SEEDERS =           '\n<b>🌱S/L               :</b> <code>{Seeders}</code> | '
-    LEECHERS =                                           '<b></b> <code>{Leechers}</code>'
+    SEEDERS =           '\n<b>🌱S/L               :</b> {Seeders} | '
+    LEECHERS =                                           '<b></b> {Leechers}'
 
     ####--------SEEDING----------
-    SEED_SIZE =      '\n<b>💾 Size:</b> <code>{Size}</code>'
-    SEED_SPEED =     '\n<b>📶 Speed:</b> <code>{Speed}</code> | '
+    SEED_SIZE =      '\n<b>💾 Size:</b> {Size}'
+    SEED_SPEED =     '\n<b>📶 Speed:</b> {Speed} | '
     UPLOADED =                                     '<b>Uploaded:</b> <code>{Upload}</code>'
     RATIO =          '\n<b>🌀 Ratio:</b> <code>{Ratio}</code> | '
     TIME =                                         '<b>Time:</b> <code>{Time}</code>'
