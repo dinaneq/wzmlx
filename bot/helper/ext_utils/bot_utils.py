@@ -163,6 +163,8 @@ def get_progress_bar_stringWORK_1(pct):
     return f"{p_str}"
 
 def get_progress_bar_string(pct):
+    BAR_PENUH = config_dict['BAR_PENUH']
+    BAR_KOSONG = config_dict['BAR_KOSONG']
     if isinstance(pct, str):
         pct = float(pct.strip("%"))
     p = min(
