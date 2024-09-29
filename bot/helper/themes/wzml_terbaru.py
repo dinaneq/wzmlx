@@ -171,10 +171,10 @@ class WZMLStyle:
 
     # def get_readable_message(): ---> bot_utilis.py
     ####--------OVERALL MSG HEADER----------
-    STATUS_NAME =       '<blockquote><code>{Name}</code></blockquote>\n'
+    STATUS_NAME =       '<b>{Name}</b>\n'
 
     #####---------PROGRESSIVE STATUS-------
-    STATUS =            '\n<b>{Status}</b>'
+    STATUS =            '<blockquote>\n<b>{Status}</b>'
     BAR =               '          {Bar}'
     
     PROCESSED =         '\n<b>🔄 Ukuran       :</b> {Processed}'
@@ -200,7 +200,7 @@ class WZMLStyle:
 
     ####--------OVERALL MSG FOOTER----------
     USER =              '\n<b>👤 Pengguna   :</b> <code>{User}</code>'
-    ID =                                                        ' | <code>{Id}</code>'
+    ID =                                                        ' | <code>{Id}</code></blockquote>'
     BTSEL =          '\n<b>✂️ Pilih:</b> {Btsel}'
     CANCEL =         '\n\n<b>🚫</b> {Cancel}\n\n'
 
