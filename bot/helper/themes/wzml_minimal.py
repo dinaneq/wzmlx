@@ -176,10 +176,11 @@ Token sementara bukan milik Anda! \nSilakan buat sendiri'''
     STATUS_NAME =       '<blockquote><code><b>{Name}</b></code></blockquote>\n'
 
     #####---------PROGRESSIVE STATUS-------
-    BAR =               '\n{Bar}'
+    STATUS =         '{Status}'
+    BAR =                      '{Bar}'
     PROCESSED =      '\n• Ukuran        : {Processed}'
     SPEED =            '\n• Kecepatan   : {Speed}'
-    STATUS =                                        '• <a href="{Url}">{Status}</a>'
+    
     ETA =                '\n• Perkiraan    : {Eta}'
     ELAPSED =         '\n• Berjalan      : {Elapsed}'
     ENGINE =           '\n• Mesin          : {Engine}'
