@@ -5,7 +5,7 @@ from bot.helper.ext_utils.translate_optional import PASSWORD_ERROR_MESSAGE , CLO
 
 YT_HELP_MESSAGE = ["""<i>Kirim tautan / file bersama dengan cmd atau balas cmd ke mirror atau leech yang didukung ytdl di Telegram atau GDrive atau DDLs dengan Mesin berbeda seperti RClone atau yt-dlp</i>
 
-<blockquote expandable>➲ <b><u>Available Args</u></b>:
+➲ <b><u>Available Args</u></b>:
 
 1.  <b> - n atau-name: < / b> Ganti nama berkas.
 2.  <b> - z atau-zip: < / b> Berkas zip atau Tautan
@@ -21,9 +21,9 @@ YT_HELP_MESSAGE = ["""<i>Kirim tautan / file bersama dengan cmd atau balas cmd k
 12. <b> - c or -category: < / b> Kategori Gdrive untuk Diunggah, Nama Spesifik (tidak peka huruf besar / kecil)
 13. < b > -ud atau-dump: < / b> Buang kategori yang akan Diunggah, Nama Tertentu (tidak peka huruf besar / kecil) atau chat_id atau chat_username
 14. <b> - ss atau-screenshots: < / b> Hasilkan Tangkapan Layar untuk File Leeched
-15. <b> - t atau-thumb: < / b> Tumbnail Khusus untuk Hasil leech Tertentu</blockquote>
+15. <b> - t atau-thumb: < / b> Tumbnail Khusus untuk Hasil leech Tertentu
 """, """
-<blockquote expandable>➲ <b><i>Kirim tautan bersama dengan baris perintah</i></b>:
+<blockquote>➲ <b><i>Kirim tautan bersama dengan baris perintah</i></b>:
 <code>/cmd</code> link -s -n nama baru -opt x:y|x1:y1
 
 ➲ <b><i>Dengan membalas tautan</i></b>:
