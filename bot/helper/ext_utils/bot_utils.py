@@ -150,7 +150,7 @@ def get_progress_bar_stringORI(pct):
     p_str += '◌' * (12 - cFull)
     return f"{p_str}"
     
-def get_progress_bar_string(pct):
+def get_progress_bar_stringWORK_1(pct):
     if isinstance(pct, str):
         pct = float(pct.strip("%"))
     p = min(
@@ -160,6 +160,18 @@ def get_progress_bar_string(pct):
     cFull = int(p // 10)
     p_str = "●" * cFull
     p_str += "◌" * (10 - cFull)
+    return f"{p_str}"
+
+def get_progress_bar_string(pct):
+    if isinstance(pct, str):
+        pct = float(pct.strip("%"))
+    p = min(
+        max(pct, 0),
+        100
+    )
+    cFull = int(p // 10)
+    p_str = BAR_PENUH * cFull
+    p_str += BAR_KOSONG * (10 - cFull)
     return f"{p_str}"
    
 
