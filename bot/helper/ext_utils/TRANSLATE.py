@@ -5,7 +5,7 @@ default_desp = {'AS_DOCUMENT' :  'Jenis unggahan file Telegram default. Defaultn
 'BASE_URL' :  'BASE_URL yang valid tempat bot dikerahkan untuk menggunakan pemilihan file web torrent. Format URL harus http://myip, dimana myip adalah IP/Domain (publik) bot Anda atau jika Anda memilih port selain 80 maka tulislah dalam format ini http://myip',
 'BASE_URL_PORT' :  'Yang mana Docker BASE_URL. Standarnya adalah 80. Int',
 'BAR_KOSONG' : 'Anda dapat mengubah bar kosong sesuai keinginan, hanya di ijinkan satu karakter,\nDefault nya adalah "◌"',
-'BAR_PENUH' : 'Anda dapat mengubah bar Penuh sesuai keinginan, hanya di ijinkan satu karakter,\nDefault nya adalah "●"'
+'BAR_PENUH' : 'Anda dapat mengubah bar Penuh sesuai keinginan, hanya di ijinkan satu karakter,\nDefault nya adalah "●"',
 'BLACKLIST_USERS' :  'Batasi Pengguna untuk Menggunakan Bot. Ini akan Menampilkan Pesan Daftar Hitam. USER_ID dipisahkan dengan spasi. Str',
 'BOT_MAX_TASKS' :  'Jumlah maksimum Bot Tugas akan Berjalan paralel. (Termasuk Tugas Antrian). (hanya angka)',
 'STORAGE_THRESHOLD' :  'Membiarkan penyimpanan tertentu tetap kosong dan unduhan apa pun akan menyebabkan penyimpanan gratis kurang dari nilai ini akan dibatalkan, unit defaultnya adalah GB. (hanya angka)',
