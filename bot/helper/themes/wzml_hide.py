@@ -145,7 +145,7 @@ class WZMLStyle:
     TOTAL_FILES =           '<b>📂 Files: </b>{Files}\n'
     RCPATH =                '<b>🚩 Path: </b><code>{RCpath}</code>\n'
     M_CC =                  '<b>👤 Pengguna: </b>{Tag}\n\n'
-    M_BOT_MSG =             '🏁 <b><i>♻️Tautan telah dikirim dalam DM!!</i></b>\n♻️Segera amankan file anda sebelum dihapus atau ada pembersihan, pembersihan tidak ada konfirmasi ke pemilik file, sepenuhnya hak admin🙏🙏'
+    M_BOT_MSG =             ' <b><i>♻️Tautan telah dikirim dalam DM!!</i></b>\n\n♻️Segera amankan file anda sebelum dihapus atau ada pembersihan, pembersihan tidak ada konfirmasi ke pemilik file, sepenuhnya hak admin🙏🙏'
     
     # ----- BUTTONS -------
     CLOUD_LINK =      '☁️ Unduh Disini'
