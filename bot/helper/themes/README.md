@@ -3,9 +3,8 @@ Tema Khusus * * * 🛠
 - Tutorial Tutorial tentang cara membuat Tema Khusus Anda.
 - _mari kita Mulai dengan Utilitas._
 
-### * Persyaratan :*
-1. Editor Lokal atau Gunakan [github.dev](https://github.dev)
-2. Contoh Berkas: Periksa [wzml_minimal.py](https://github.com/weebzone/WZML-X/blob/master/bot/helper/themes/wzml_minimal.py)
+### Persyaratan :
+Contoh Berkas: [wzml_minimal.py](https://github.com/weebzone/WZML-X/blob/master/bot/helper/themes/wzml_minimal.py)
 
 
 #### * Langkah 1: * Buka Editor Kosong dan Tempel Kode wzml_minimal.py dan beri nama itu wzml_custom.py
@@ -25,8 +24,8 @@ kelas WZMLStyle: # Jangan Ubah Ini
 
 #### * Langkah 3: * Sekarang, Buka [init.py] () dan Edit seperti yang ditunjukkan di bawah ini dan Simpan
 AVL_THEMES = {"minimal": wzml_minimal," emoji": wzml_emoji," futuristik": wzml_futuristik} # Anda dapat menambahkan Lebih Banyak ...
-# Tambahkan Nilai Dict Terakhir, seperti yang ditunjukkan, name: filename (sama seperti yang diberikan pada Langkah 1)
-# Nama dapat berupa Pilihan apa pun untuk Memanggil Nama Tema
+
+# anda dapat memanggil tema di botsetting dengan nama custom anda, misal emoji,minimal,futuristik
 ---
 
 _sudah selesai, Sekarang Anda telah Berhasil Membuat Tema Anda Sendiri !_
