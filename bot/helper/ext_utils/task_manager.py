@@ -198,7 +198,7 @@ async def limit_checker(size, listener, isTorrent=False, isMega=False, isDriveLi
                 LOGGER.info(f"User : {user_id} | Daily Leech Size : {get_readable_file_size(lsize)}")
     if limit_exceeded:
         if size:
-            return f"{limit_exceeded}.\nYour List/File/Folder size is {get_readable_file_size(size)}."
+            return f"{limit_exceeded}.\nUkuran file anda  {get_readable_file_size(size)}."
         elif isPlayList != 0:
             return f"{limit_exceeded}.\nYour playlist has {isPlayList} files."
 
