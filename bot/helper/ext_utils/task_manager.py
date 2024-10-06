@@ -140,7 +140,7 @@ async def limit_checker(size, listener, isTorrent=False, isMega=False, isDriveLi
         if MEGA_LIMIT := config_dict['MEGA_LIMIT']:
             limit = MEGA_LIMIT * 1024**3
             if size > limit:
-                limit_exceeded = f'Mega limit is {get_readable_file_size(limit)}'
+                limit_exceeded = f'Batas maximal file dari mega adalah  {get_readable_file_size(limit)}'
     elif isDriveLink:
         if GDRIVE_LIMIT := config_dict['GDRIVE_LIMIT']:
             limit = GDRIVE_LIMIT * 1024**3
