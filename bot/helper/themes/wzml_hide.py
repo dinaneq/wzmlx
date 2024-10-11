@@ -166,7 +166,7 @@ class WZMLStyle:
     STATUS_NAME =       '<blockquote><code>{Name}</code></blockquote>\n'
 
     #####---------PROGRESSIVE STATUS-------
-    STATUS =            '\n{Status}'
+    STATUS =            '<blockquote>\n{Status}'
     BAR =                            '{Bar}'
     PROCESSED =         '\n<b>🔄 Ukuran       :</b> <code>{Processed}</code>'
     
@@ -192,7 +192,7 @@ class WZMLStyle:
 
     ####--------OVERALL MSG FOOTER----------
     USER =              '\n<b>👤 Pengguna   :</b> <code>Mode Aman👀</code>'
-    ID =                                                        ' | <code>{Id}</code>'
+    ID =                                                        ' | <code>{Id}</code></blockquote>'
     BTSEL =          '\n<b>✂️ Pilih:</b> {Btsel}'
     CANCEL =         '\n\n<b>🚫</b> {Cancel}\n\n'
 
