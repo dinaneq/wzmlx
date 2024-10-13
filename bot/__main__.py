@@ -195,10 +195,10 @@ async def restart_notification():
                 msg = BotTheme('RESTART_SUCCESS', time=now.strftime('%I:%M:%S %p'), date=now.strftime('%d/%m/%y'), timz=config_dict['TIMEZONE'], version=get_version()) if cid == chat_id else BotTheme('RESTARTED')
                 msg += "\n\n💥<b><i>Tugas gagal di selesaikan\nUlangi tugas anda</i></b>"
                 for tag, links in data.items():
-                    msg += f"\n<b>Pengguna:</b> {tag}\n <b>Tugas:</b>"
+                    msg += f"\n<b>Pengguna:</b> {tag}\n<b>Tugas:</b>\n"
                     for index, link in enumerate(links, start=1):
                         msg_link, source = next(iter(link.items()))
-                        msg += f" {index}. <a href='{source}'>Sumber Tautan</a> ->  <a href='{msg_link}'>Link Chat</a> |"
+                        msg += f" {index}. <a href='{source}'>Sumber Tautan</a> ->  <a href='{msg_link}'>Link Chat</a> \n"
                         if len(msg.encode()) > 4000:
                             await send_incompelete_task_message(cid, msg)
                             msg = ''
