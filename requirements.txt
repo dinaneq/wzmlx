@@ -31,7 +31,8 @@ pybase64
 pycountry
 pymongo
 #pyrogram==2.0.106
-git+https://github.com/KurimuzonAkuma/pyrogram.git
+pyrofork==2.2.11
+#git+https://github.com/KurimuzonAkuma/pyrogram.git
 python-dotenv
 python-magic
 qbittorrent-api
