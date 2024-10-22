@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 from tzlocal import get_localzone
 from pytz import timezone
@@ -20,7 +21,6 @@ from uvloop import install
 
 #from faulthandler import enable as faulthandler_enable
 #faulthandler_enable()
-
 install()
 setdefaulttimeout(600)
 
@@ -140,11 +140,11 @@ TELEGRAM_HASH = environ.get('TELEGRAM_HASH', '')
 if len(TELEGRAM_HASH) == 0:
     log_error("TELEGRAM_HASH variable is missing! Exiting now")
     exit(1)
-    
+
 TIMEZONE = environ.get('TIMEZONE', '')
 if len(TIMEZONE) == 0:
     TIMEZONE = 'Asia/Kolkata'
-    
+
 def changetz(*args):
     return datetime.now(timezone(TIMEZONE)).timetuple()
 Formatter.converter = changetz
@@ -187,7 +187,7 @@ if len(SUDO_USERS) != 0:
     aid = SUDO_USERS.split()
     for id_ in aid:
         user_data[int(id_.strip())] = {'is_sudo': True}
-        
+
 BLACKLIST_USERS = environ.get('BLACKLIST_USERS', '')
 if len(BLACKLIST_USERS) != 0:
     for id_ in BLACKLIST_USERS.split():
@@ -206,11 +206,27 @@ LINKS_LOG_ID = '' if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 MIRROR_LOG_ID = environ.get('MIRROR_LOG_ID', '')
 if len(MIRROR_LOG_ID) == 0:
     MIRROR_LOG_ID = ''
-    
+#___________________________MODIF DISINI________________________________
+BAR_PENUH = environ.get('BAR_PENUH', '')
+if len(BAR_PENUH) == 0:
+    BAR_PENUH = '●'
+elif len(BAR_PENUH) > 1:
+    BAR_PENUH = BAR_PENUH[0]  # Ambil hanya karakter pertama
+
+
+BAR_KOSONG = environ.get('BAR_KOSONG', '')
+if len(BAR_KOSONG) == 0:
+    BAR_KOSONG = '◌'
+elif len(BAR_KOSONG) > 1:
+    BAR_KOSONG = BAR_KOSONG[0]  # Ambil hanya karakter pertama
+
+
+#__________________________AKHIR MOD____________________________
+
 LEECH_LOG_ID = environ.get('LEECH_LOG_ID', '')
 if len(LEECH_LOG_ID) == 0:
     LEECH_LOG_ID = ''
-    
+
 EXCEP_CHATS = environ.get('EXCEP_CHATS', '')
 if len(EXCEP_CHATS) == 0:
     EXCEP_CHATS = ''
@@ -219,7 +235,7 @@ def wztgClient(*args, **kwargs):
     if 'max_concurrent_transmissions' in signature(tgClient.__init__).parameters:
         kwargs['max_concurrent_transmissions'] = 1000
     return tgClient(*args, **kwargs)
-
+            
 IS_PREMIUM_USER = False
 user = ''
 USER_SESSION_STRING = environ.get('USER_SESSION_STRING', '')
@@ -232,14 +248,16 @@ if len(USER_SESSION_STRING) != 0:
     except Exception as e:
         log_error(f"Failed making client from USER_SESSION_STRING : {e}")
         user = ''
-
+                
 MEGA_EMAIL = environ.get('MEGA_EMAIL', '')
 MEGA_PASSWORD = environ.get('MEGA_PASSWORD', '')
 if len(MEGA_EMAIL) == 0 or len(MEGA_PASSWORD) == 0:
     log_warning('MEGA Credentials not provided!')
     MEGA_EMAIL = ''
     MEGA_PASSWORD = ''
-    
+
+METADATA = environ.get('METADATA', '')
+
 GDTOT_CRYPT = environ.get('GDTOT_CRYPT', '')
 if len(GDTOT_CRYPT) == 0:
     GDTOT_CRYPT = ''
@@ -251,7 +269,7 @@ if len(JIODRIVE_TOKEN) == 0:
 REAL_DEBRID_API = environ.get('REAL_DEBRID_API', '')
 if len(REAL_DEBRID_API) == 0:
     REAL_DEBRID_API = ''
-    
+
 DEBRID_LINK_API = environ.get('DEBRID_LINK_API', '')
 if len(DEBRID_LINK_API) == 0:
     DEBRID_LINK_API = ''
@@ -283,7 +301,7 @@ if len(LEECH_FILENAME_CAPTION) == 0:
 LEECH_FILENAME_REMNAME = environ.get('LEECH_FILENAME_REMNAME', '')
 if len(LEECH_FILENAME_REMNAME) == 0:
     LEECH_FILENAME_REMNAME = ''
-    
+
 MIRROR_FILENAME_PREFIX = environ.get('MIRROR_FILENAME_PREFIX', '')
 if len(MIRROR_FILENAME_PREFIX) == 0:
     MIRROR_FILENAME_PREFIX = ''
@@ -412,7 +430,7 @@ if len(UPSTREAM_REPO) == 0:
 UPSTREAM_BRANCH = environ.get('UPSTREAM_BRANCH', '')
 if len(UPSTREAM_BRANCH) == 0:
     UPSTREAM_BRANCH = 'master'
-    
+
 UPGRADE_PACKAGES = environ.get('UPGRADE_PACKAGES', '')
 UPGRADE_PACKAGES = UPGRADE_PACKAGES.lower() == 'true'
 
@@ -468,7 +486,7 @@ PLAYLIST_LIMIT = '' if len(PLAYLIST_LIMIT) == 0 else int(PLAYLIST_LIMIT)
 FSUB_IDS = environ.get('FSUB_IDS', '')
 if len(FSUB_IDS) == 0:
     FSUB_IDS = ''
-    
+
 LINKS_LOG_ID = environ.get('LINKS_LOG_ID', '')
 LINKS_LOG_ID = '' if len(LINKS_LOG_ID) == 0 else int(LINKS_LOG_ID)
 
@@ -491,7 +509,7 @@ DISABLE_DRIVE_LINK = DISABLE_DRIVE_LINK.lower() == 'true'
 
 BOT_THEME = environ.get('BOT_THEME', '')
 if len(BOT_THEME) == 0:
-    BOT_THEME = 'minimal'
+    BOT_THEME = 'terbaru'
 
 IMAGES = environ.get('IMAGES', '')
 IMAGES = (IMAGES.replace("'", '').replace('"', '').replace(
@@ -517,7 +535,7 @@ if len(AUTHOR_URL) == 0:
 TITLE_NAME = environ.get('TITLE_NAME', '')
 if len(TITLE_NAME) == 0:
     TITLE_NAME = 'WZ-M/L-X'
-    
+
 COVER_IMAGE = environ.get('COVER_IMAGE', '')
 if len(COVER_IMAGE) == 0:
     COVER_IMAGE = 'https://graph.org/file/60f9f8bcb97d27f76f5c0.jpg'
@@ -537,7 +555,7 @@ SET_COMMANDS = SET_COMMANDS.lower() == 'true'
 
 CLEAN_LOG_MSG = environ.get('CLEAN_LOG_MSG', '')
 CLEAN_LOG_MSG = CLEAN_LOG_MSG.lower() == 'true'
-    
+
 SHOW_EXTRA_CMDS = environ.get('SHOW_EXTRA_CMDS', '')
 SHOW_EXTRA_CMDS = SHOW_EXTRA_CMDS.lower() == 'true'
 
@@ -601,6 +619,8 @@ if len(MDL_TEMPLATE) == 0:
 <a href='{url}'>Read More ...</a>'''
 
 config_dict = {'ANIME_TEMPLATE': ANIME_TEMPLATE,
+               'BAR_KOSONG' : BAR_KOSONG,
+               'BAR_PENUH' : BAR_PENUH,
                'AS_DOCUMENT': AS_DOCUMENT,
                'AUTHORIZED_CHATS': AUTHORIZED_CHATS,
                'AUTO_DELETE_MESSAGE_DURATION': AUTO_DELETE_MESSAGE_DURATION,
@@ -612,6 +632,7 @@ config_dict = {'ANIME_TEMPLATE': ANIME_TEMPLATE,
                'CAP_FONT': CAP_FONT,
                'CMD_SUFFIX': CMD_SUFFIX,
                'DATABASE_URL': DATABASE_URL,
+               'METADATA': METADATA,
                'REAL_DEBRID_API': REAL_DEBRID_API,
                'DEBRID_LINK_API': DEBRID_LINK_API,
                'FILELION_API': FILELION_API,
