@@ -43,4 +43,4 @@ tenacity
 tgcrypto
 uvloop
 xattr
-yt-dlp==2023.10.07
+yt-dlp==2024.12.13
