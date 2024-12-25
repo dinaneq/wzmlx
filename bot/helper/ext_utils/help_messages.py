@@ -1,8 +1,116 @@
 #!/usr/bin/env python3
 from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot.helper.ext_utils.TRANSLATE import default_desp , MIRROR_HELP_MESSAGE
-from bot.helper.ext_utils.translate_optional import PASSWORD_ERROR_MESSAGE , CLONE_HELP_MESTY[[[[["https://telegra.ph/Help-12-25-1              
-  
+from bot.helper.ext_utils.translate_optional import PASSWORD_ERROR_MESSAGE , CLONE_HELP_MESSAGE
+
+YT_HELP_MESSAGE = ["""<i>Kirim tautan / file bersama dengan cmd atau balas cmd ke mirror atau leech yang didukung ytdl di Telegram atau GDrive atau DDLs dengan Mesin berbeda seperti RClone atau yt-dlp</i>
+
+➲ <b><u>Available Args</u></b>:
+
+1.  <b> - n atau-name: < / b> Ganti nama berkas.
+2.  <b> - z atau-zip: < / b> Berkas zip atau Tautan
+3.  <b>-naik atau-unggah: < / b> Unggah ke Drive Anda atau RClone atau DDL
+4.  <b> - b atau-bulk: < / b> Unduh tautan massal.
+5.  <b>-i: < /b> Unduh banyak tautan dengan balas
+6.  <b> - m atau-sd atau-samedir: < / b> Unduh banyak tautan dalam direktori unggahan yang sama.
+7.  <b>-opt or-options: < / b> Lampirkan opsi yt-dlp Khusus untuk ditautkan
+8.  <b>-s atau-select: < / b> Pilih file dari tautan yt-dlp meskipun kualitas ditentukan
+9.  <b>-rcf: < / b> RClone Bendera tambahan
+10. <b>-id: < / b> Id atau tautan Folder GDrive
+11. <b> - indeks: < / b> Url indeks untuk gdrive_arg
+12. <b> - c or -category: < / b> Kategori Gdrive untuk Diunggah, Nama Spesifik (tidak peka huruf besar / kecil)
+13. < b > -ud atau-dump: < / b> Buang kategori yang akan Diunggah, Nama Tertentu (tidak peka huruf besar / kecil) atau chat_id atau chat_username
+14. <b> - ss atau-screenshots: < / b> Hasilkan Tangkapan Layar untuk File Leeched
+15. <b> - t atau-thumb: < / b> Tumbnail Khusus untuk Hasil leech Tertentu
+""", """
+<blockquote>➲ <b><i>Kirim tautan bersama dengan baris perintah</i></b>:
+<code>/cmd</code> link -s -n nama baru -opt x:y|x1:y1
+
+➲ <b><i>Dengan membalas tautan</i></b>:
+<code>/cmd</code> -n  nama baru -z password -opt x:y|x1:y1
+
+➲ <b><i>Nama Baru</i></b>: -n or -name
+<code>/cmd</code> link -n nama baru
+<b> Catatan: </b> Jangan menambahkan ekstensi file
+
+➲ <b><i>Pembuatan Tangkapan Layar</b>: -ss or -screenshots
+<code>/cmd</code> link -ss number ,Screenshots untuk setiap File Video
+
+➲ <b><i>Custom Thumbnail</b>: -t or -thumb
+<code>/cmd</code> link -t tglink|dl_link
+<b>Direct Link:</b> dl_link specifies download link, where it is Image url
+<b>Tg Link:</b> Give Public/Private/Super Link to download Image from Tg
+
+➲ <b><i>Quality Buttons</i></b>: -s or -select
+Memetikan kualitas default ditambahkan dari opsi yt-dlp menggunakan opsi format dan Anda perlu memilih kualitas untuk tautan atau tautan tertentu dengan fitur multi tautan.
+<code>/cmd</code> link -s
+
+➲ <b<i>Zip files (dengan/tanpa pasword)</i></b>: -z or -zip password
+<code>/cmd</code> link -z (zip)
+<code>/cmd</code> link -z password (pasword zip)
+
+➲ <b><i>Options</i></b>: -opt or -options
+<code>/cmd</code> link -opt playliststart:^10|fragment_retries:^inf|matchtitle:S13|writesubtitles:true|live_from_start:true|postprocessor_args:{"ffmpeg": ["-threads", "4"]}|wait_for_video:(5, 100)
+<b>Note:</b> Tambahkan `^` sebelum integer atau float, beberapa nilai harus berupa numerik dan beberapa string.
+Seperti playlist_items:10 berfungsi dengan string, jadi tidak perlu menambahkan "^" sebelum angka tetapi playlistend hanya berfungsi dengan integer jadi Anda harus menambahkan "^" sebelum angka seperti contoh di atas.
+Anda juga dapat menambahkan Tuple dan dict. Gunakan tanda kutip ganda di dalam dict.
+
+➲ <b><i>Multi tautan hanya dengan membalas tautan pertama</i></b>: -i
+<code>/cmd</code> -i 10(jumlah link)
+
+➲ <b><i>Multi tautan dalam direktori unggahan yang sama hanya dengan membalas tautan pertama</i></b>: -m or -sd or -samedir
+<code>/cmd</code> -i 10(jumlah link) -m nama folder
+
+➲ <b><i>Upload Custom Drive:</i></b> -id & -index(Optional)
+<code>/{cmd}</code> -id <code>drive_folder_link</code> or <code>drive_id</code> -index <code>https://example.com/0:</code>
+Di sini, drive_id harus berupa id folder atau tautan folder dan indeks harus berupa url jika tidak maka tidak akan diterima.
+
+➲ <b><i>Custom Category Select:</i></b> -c or -category
+<code>/{cmd}</code> -c <code>category_name</code>
+Ini berfungsi untuk Kategori Bot dan juga UserTDs (jika diaktifkan)
+Anda juga dapat memilih Drive Upload dari Buttons jika memiliki lebih dari 1 dan argumen ini tidak ditentukan
+
+➲ <b><i>Custom Dump Select:</i></b> -ud or -dump
+<code>/{cmd}</code> -ud <code>dump_name</code> or <code>@username</code> or <code>-100xxxxxx chat_id</code> or all
+Anda juga dapat memilih Buang Obrolan dari Tombol jika memiliki lebih dari 1 dan argumen ini tidak ditentukan
+Anda -ud semua untuk Mengunggah di semua Dump Obrolan Anda
+Pastikan Bot sudah menjadi Admin jika tidak, Bot tidak akan menerima.
+
+➲ <b><i>Upload</i></b>: -up or -upload
+<code>/cmd</code> link -up <code>rcl</code> (Untuk memilih konfigurasi rclone, remote dan path)
+<code>/cmd</code> link -up <code>ddl</code>
+Anda dapat langsung menambahkan jalur unggah: -up remote:dir/subdir
+
+Jika DEFAULT_UPLOAD adalah rc maka Anda dapat meneruskan: gd untuk mengunggah menggunakan alat gdrive ke GDRIVE_ID.
+Jika DEFAULT_UPLOAD adalah gd maka Anda dapat meneruskan: rc untuk mengunggah ke RCLONE_PATH.
+Jika DEFAULT_UPLOAD adalah ddl maka Anda dapat melewatkan: rc atau gd untuk mengunggah ke RCLONE_PATH atau GDRIVE_ID
+Jika Anda ingin menambahkan jalur secara manual dari konfigurasi Anda (diunggah dari usetting) tambahkan mrcc: sebelum jalur tanpa spasi
+<code>/cmd</code> link -up <code>mrcc:</code>main:dump
+
+➲ <b><i>RClone Flags</i></b>: -rcf
+<code>/cmd</code> link -up path|rcl -rcf --buffer-size:8M|--drive-starred-only|key|key:value
+This will override all other flags except --exclude
+Check here all <a href='https://rclone.org/flags/'>RcloneFlags</a>.
+
+➲ <b><i>Unduhan Massal</i></b>: -b or -bulk
+Massal dapat digunakan melalui pesan teks dan dengan membalas file teks berisi tautan yang dipisahkan oleh baris baru.
+Anda dapat menggunakannya hanya dengan membalas pesan (teks/file).
+Semua opsi harus disertai tautan!
+<b>Contoh:</b>
+link1 -n nama baru -up remote1:path1 -rcf |key:value|key:value
+link2 -z -n nama baru -up remote2:path2
+link3 -z -n nama baru -opt ytdlpoptions
+
+<b>Note:</b> Anda tidak dapat menambahkan -m arg hanya untuk beberapa tautan, lakukan untuk semua tautan atau gunakan multi tanpa massal!
+tautan pswd: pass(zip) opt: ytdlpoptions up: remote2:path2
+Balas contoh ini dengan cmd /cmd b(bulk) ini
+Anda dapat mengatur awal dan akhir tautan dari massal dengan -b start:end atau hanya diakhiri dengan -b :end atau hanya dimulai dengan -b start. Awal defaultnya adalah dari nol (tautan pertama) hingga inf.
+
+➲ <b>NOTES:</b>
+Periksa semua opsi API yt-dlp dari <a href='https://github.com/yt-dlp/yt-dlp/blob/master/yt_dlp/YoutubeDL.py#L184'>FILE</a> ini </blockquote>
+"""]
+
+
 RSS_HELP_MESSAGE = """
 <blockquote expandable>➲ <b>Format to adding feed url(s):</b>
 Title1 link (required)
@@ -30,7 +138,7 @@ Another example: inf:  1080  or 720p|.web. or .webrip.|hvec or x264. This will p
 
 
 CATEGORY_HELP_MESSAGE = """id: Balas ke aktif /{cmd} yang digunakan untuk memulai pengunduhan atau tambahkan gid bersama dengan {cmd}
-Perintah ini terutama untuk mengubah kategori jika Anda memutuskan untuk mengubah kategori dari unduhan yang sudah ditambahkan..
+Perintah ini terutama untuk mengubah kategori jika Anda memutuskan untuk mengubah kategori dari unduhan yang sudah ditambahkan.
 Tetapi Anda selalu dapat menggunakan-c atau -category with untuk memilih kategori sebelum pengunduhan dimulai.
 
 <blockquote dapat diperluas>➲
