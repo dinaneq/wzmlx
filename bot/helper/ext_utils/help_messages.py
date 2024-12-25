@@ -3,7 +3,8 @@ from bot.helper.telegram_helper.bot_commands import BotCommands
 from bot.helper.ext_utils.TRANSLATE import default_desp , MIRROR_HELP_MESSAGE
 from bot.helper.ext_utils.translate_optional import PASSWORD_ERROR_MESSAGE , CLONE_HELP_MESSAGE
 
-YT_HELP_MESSAGE = ["""<i>Kirim tautan / file bersama dengan cmd atau balas cmd ke mirror atau leech yang didukung ytdl di Telegram atau GDrive atau DDLs dengan Mesin berbeda seperti RClone atau yt-dlp</i>
+YT_HELP_MESSAGE = ["https://telegra.ph/Help-12-25-15"]
+#YT_HELP_MESSAGE = ["""<i>Kirim tautan / file bersama dengan cmd atau balas cmd ke mirror atau leech yang didukung ytdl di Telegram atau GDrive atau DDLs dengan Mesin berbeda seperti RClone atau yt-dlp</i>
 
 ➲ <b><u>Available Args</u></b>:
 
