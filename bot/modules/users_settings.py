@@ -206,7 +206,7 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
             set_exist = await aiopath.exists(rclone_path)
             text += f"➲ <b>RCʟᴏɴᴇ.Cᴏɴғ Fɪʟᴇ :</b> <i>{'' if set_exist else 'Not'} Exists</i>\n\n"
         elif key == 'thumb':
-    text += "➲ <b>Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ :</b> Dɪsᴀʙʟᴇᴅ\n"
+             text += "➲ <b>Cᴜsᴛᴏᴍ Tʜᴜᴍʙɴᴀɪʟ :</b> Dɪsᴀʙʟᴇᴅ\n"
     # Tidak ada tombol tambahan
         elif key == 'yt_opt':
             set_exist = 'Nᴏᴛ Exɪsᴛs' if (val:=user_dict.get('yt_opt', config_dict.get('YT_DLP_OPTIONS', ''))) == '' else val
@@ -257,7 +257,7 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
             buttons.ibutton("Sᴛᴏᴘ Cʜᴀɴɢᴇ", f"userset {user_id} {key}")
         if set_exist and set_exist != 'Nᴏᴛ Exɪsᴛs' and (set_exist != get_readable_file_size(config_dict['LEECH_SPLIT_SIZE']) + ' (Default)'):
             if key == 'thumb':
-    buttons.ibutton("Tʜᴜᴍʙɴᴀɪʟ Dɪsᴀʙʟᴇᴅ", "disabled", "header")
+                buttons.ibutton("Tʜᴜᴍʙɴᴀɪʟ Dɪsᴀʙʟᴇᴅ", "disabled", "header")
             elif key == 'user_tds':
                 buttons.ibutton('Sʜᴏᴡ UsᴇʀTDs', f"userset {user_id} show_tds", "header")
             buttons.ibutton("↻ Dᴇʟᴇᴛᴇ", f"userset {user_id} d{key}")
