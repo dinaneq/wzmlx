@@ -289,7 +289,7 @@ class WZMLStyle:
 
 ➢<b>📂 Leech Harian  : </b><code>{DL}</code> per hari
 ➢<b>⚙️ Leech Type :</b> <code>{LTYPE}</code>
-➢<b>🖼️ Thumbnail :</b> <code>{THUMB}</code>
+➢<b>🖼️ Thumbnail :</b> <code>Exɪsᴛs</code>
 ➢<b>♈ Split Size :</b> <code>{SPLIT_SIZE}</code>
 ➢<b>♐ Equal Splits :</b> <code>{EQUAL_SPLIT}</code>
 ➢<b>♒ Media Group :</b> <code>{MEDIA_GROUP}</code>
