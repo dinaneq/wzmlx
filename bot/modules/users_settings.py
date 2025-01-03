@@ -40,7 +40,7 @@ GOFILE_TOKEN = os.getenv('GOFILE_TOKEN')
 # Periksa apakah token berhasil dimuat
 if not GOFILE_TOKEN:
     if not GOFILE_TOKEN:
-        GOFILE_TOKEN = "SAFL89OsA7n9184EHxGCMiWc2wq9NMBZ"  # Nilai default token
+        GOFILE_TOKEN = "ikT3TJMacPF8NNXJQ7G7G9z244hV0eQK"  # Nilai default token
 
 
 
@@ -147,6 +147,9 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
         if not (val := user_dict.get('ddl_servers', {})):
             val = {'gofile': [True, GOFILE_TOKEN]}  # Default GoFile aktif
             update_user_ldata(user_id, 'ddl_servers', val)
+            if DATABASE_URL:
+                await 
+        DbManger().update_user_data(user_id)
 
 # Hitung jumlah DDL servers
         ddl_serv = len(val)
@@ -185,8 +188,13 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
         dailyll = get_readable_file_size(await getdailytasks(user_id, check_leech=True)) if config_dict['DAILY_LEECH_LIMIT'] and user_id != OWNER_ID else "∞"
 
         thumbmsg = "Exists" if await aiopath.exists(thumbpath) else "Not Exists"
-        #buttons.ibutton(f"{'✅️' if thumbmsg == 'Exists' else ''} Thumbnail", f"userset {user_id} thumb")
-        
+        #___________________MOD THUMBNAIL_______
+        if config_dict.get('DISABLE_THUMB', True):
+            buttons.ibutton(f"{'✅️' if thumbmsg == 'Exists' else ''} Thumbnail", f"userset {user_id} thumb")
+        else:
+            pass
+            
+        #___________mod thumbnal___'''''''
         split_size = get_readable_file_size(config_dict['LEECH_SPLIT_SIZE']) + ' (Default)' if user_dict.get('split_size', '') == '' else get_readable_file_size(user_dict['split_size'])
         equal_splits = 'Enabled' if user_dict.get('equal_splits', config_dict.get('EQUAL_SPLITS')) else 'Disabled'
         media_group = 'Enabled' if user_dict.get('media_group', config_dict.get('MEDIA_GROUP')) else 'Disabled'
