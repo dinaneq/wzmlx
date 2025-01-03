@@ -376,6 +376,9 @@ QUEUE_UPLOAD = '' if len(QUEUE_UPLOAD) == 0 else int(QUEUE_UPLOAD)
 INCOMPLETE_TASK_NOTIFIER = environ.get('INCOMPLETE_TASK_NOTIFIER', '')
 INCOMPLETE_TASK_NOTIFIER = INCOMPLETE_TASK_NOTIFIER.lower() == 'true'
 
+DISABLE_THUMB = environ.get('DISABLE_THUMB', '')
+DISABLE_THUMB = DISABLE_THUMB.lower() == 'true'
+
 STOP_DUPLICATE = environ.get('STOP_DUPLICATE', '')
 STOP_DUPLICATE = STOP_DUPLICATE.lower() == 'true'
 
@@ -620,6 +623,7 @@ if len(MDL_TEMPLATE) == 0:
 
 config_dict = {'ANIME_TEMPLATE': ANIME_TEMPLATE,
                'BAR_KOSONG' : BAR_KOSONG,
+               'DISABLE_THUMB' : DISABLE_THUMB,
                'BAR_PENUH' : BAR_PENUH,
                'AS_DOCUMENT': AS_DOCUMENT,
                'AUTHORIZED_CHATS': AUTHORIZED_CHATS,
