@@ -101,6 +101,19 @@ async def login(_, message):
         await sendMessage(message, BotTheme('LOGIN_USED'))
 
 
+async def reset_all_thumbnails():
+    if DATABASE_URL:
+        # Ambil semua pengguna dari database
+        users = await DbManger().get_all_users_with_thumbnails()
+        for user in users:
+            user_id = user['id']
+            # Hapus file thumbnail
+            thumb_path = ospath.join("Thumbnails/", f"{user_id}.jpg")
+            if await aiopath.exists(thumb_path):
+                await aioremove(thumb_path)
+            # Reset thumbnail di database
+            await DbManger().update_user_doc(user_id, 'thumb', None)
+
 
 async def restart(client, message):
     restart_message = await sendMessage(message, BotTheme('RESTARTING'))
@@ -111,6 +124,7 @@ async def restart(client, message):
         if interval:
             interval[0].cancel()
     await sync_to_async(clean_all)
+    await reset_all_thumbnails()
     proc1 = await create_subprocess_exec('pkill', '-9', '-f', f'gunicorn|{bot_cache["pkgs"][-1]}')
     proc2 = await create_subprocess_exec('python3', 'update.py')
     await gather(proc1.wait(), proc2.wait())
@@ -121,6 +135,7 @@ async def restart(client, message):
 
 async def ping(_, message):
     start_time = monotonic()
+    await reset_all_thumbnails()
     reply = await sendMessage(message, BotTheme('PING'))
     end_time = monotonic()
     await editMessage(reply, BotTheme('PING_VALUE', value=int((end_time - start_time) * 1000)))
