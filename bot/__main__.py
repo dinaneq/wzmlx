@@ -30,7 +30,6 @@ from .helper.telegram_helper.filters import CustomFilters
 from .helper.telegram_helper.button_build import ButtonMaker
 from .helper.listeners.aria2_listener import start_aria2_listener
 from .helper.themes import BotTheme
-from bot.modules.users_settings import reset_all_thumbnails
 from .modules import authorize, clone, gd_count, gd_delete, gd_list, cancel_mirror, mirror_leech, status, torrent_search, torrent_select, ytdlp, \
                      rss, shell, eval, users_settings, bot_settings, speedtest, save_msg, images, imdb, anilist, mediainfo, mydramalist, gen_pyro_sess, \
                      gd_clean, broadcast, category_select
@@ -111,7 +110,7 @@ async def restart(client, message):
         if interval:
             interval[0].cancel()
     await sync_to_async(clean_all)
-    await reset_all_thumbnails()
+    #await reset_all_thumbnails()
     proc1 = await create_subprocess_exec('pkill', '-9', '-f', f'gunicorn|{bot_cache["pkgs"][-1]}')
     proc2 = await create_subprocess_exec('python3', 'update.py')
     await gather(proc1.wait(), proc2.wait())
@@ -122,7 +121,7 @@ async def restart(client, message):
 
 async def ping(_, message):
     start_time = monotonic()
-    await reset_all_thumbnails()
+    #await reset_all_thumbnails()
     reply = await sendMessage(message, BotTheme('PING'))
     end_time = monotonic()
     await editMessage(reply, BotTheme('PING_VALUE', value=int((end_time - start_time) * 1000)))
