@@ -71,7 +71,7 @@ async def start(client, message):
     await DbManger().update_pm_users(message.from_user.id)
 
 
-async def hapus_thumbnail(update, context):
+async def hapus_thumbnail(client, update):
     # Memeriksa apakah pengirim adalah admin
     if update.from_user.id not in CustomFilters.sudo:
         await update.reply("Anda tidak memiliki izin untuk menjalankan perintah ini.")
@@ -80,7 +80,6 @@ async def hapus_thumbnail(update, context):
     # Jika admin, jalankan fungsi hapus
     await hapus_data_thumbnail()
     await update.reply("Database thumbnail telah dihapus.")
-
 
 async def token_callback(_, query):
     user_id = query.from_user.id
