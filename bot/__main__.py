@@ -30,6 +30,7 @@ from .helper.telegram_helper.filters import CustomFilters
 from .helper.telegram_helper.button_build import ButtonMaker
 from .helper.listeners.aria2_listener import start_aria2_listener
 from .helper.themes import BotTheme
+from bot.modules.users_settings import reset_all_thumbnails
 from .modules import authorize, clone, gd_count, gd_delete, gd_list, cancel_mirror, mirror_leech, status, torrent_search, torrent_select, ytdlp, \
                      rss, shell, eval, users_settings, bot_settings, speedtest, save_msg, images, imdb, anilist, mediainfo, mydramalist, gen_pyro_sess, \
                      gd_clean, broadcast, category_select
@@ -99,20 +100,6 @@ async def login(_, message):
         return await sendMessage(message, BotTheme('PASS_LOGGED'))
     else:
         await sendMessage(message, BotTheme('LOGIN_USED'))
-
-
-async def reset_all_thumbnails():
-    if DATABASE_URL:
-        # Ambil semua pengguna dari database
-        users = await DbManger().get_all_users_with_thumbnails()
-        for user in users:
-            user_id = user['id']
-            # Hapus file thumbnail
-            thumb_path = ospath.join("Thumbnails/", f"{user_id}.jpg")
-            if await aiopath.exists(thumb_path):
-                await aioremove(thumb_path)
-            # Reset thumbnail di database
-            await DbManger().update_user_doc(user_id, 'thumb', None)
 
 
 async def restart(client, message):
