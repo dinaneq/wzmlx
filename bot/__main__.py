@@ -267,7 +267,7 @@ async def main():
     bot.add_handler(MessageHandler(log, filters=command(
         BotCommands.LogCommand) & CustomFilters.sudo))
   #_____commanf tambahan
-   bot.add_handler(MessageHandler(
+    bot.add_handler(MessageHandler(
         hapus_thumbnail, filters=command('hapus') & CustomFilters.sudo))
     bot.add_handler(MessageHandler(restart, filters=command(
         BotCommands.RestartCommand) & CustomFilters.sudo))
