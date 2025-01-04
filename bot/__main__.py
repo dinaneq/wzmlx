@@ -71,15 +71,6 @@ async def start(client, message):
     await DbManger().update_pm_users(message.from_user.id)
 
 
-async def hapus_thumbnail(client, update):
-    # Memeriksa apakah pengirim adalah admin
-    if update.from_user.id not in CustomFilters.sudo:
-        await update.reply("Anda tidak memiliki izin untuk menjalankan perintah ini.")
-        return
-    
-    # Jika admin, jalankan fungsi hapus
-    await hapus_data_thumbnail()
-    await update.reply("Database thumbnail telah dihapus.")
 
 async def token_callback(_, query):
     user_id = query.from_user.id
@@ -265,9 +256,6 @@ async def main():
         login, filters=command(BotCommands.LoginCommand) & private))
     bot.add_handler(MessageHandler(log, filters=command(
         BotCommands.LogCommand) & CustomFilters.sudo))
-  #_____commanf tambahan
-    bot.add_handler(MessageHandler(
-        hapus_thumbnail, filters=command('hapus') & CustomFilters.sudo))
     bot.add_handler(MessageHandler(restart, filters=command(
         BotCommands.RestartCommand) & CustomFilters.sudo))
     bot.add_handler(MessageHandler(ping, filters=command(
