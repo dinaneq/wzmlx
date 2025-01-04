@@ -82,6 +82,19 @@ fname_dict = {'rcc': 'RClone',
              'streamtape': 'StreamTape',
              }
 
+async def reset_all_thumbnails():
+    if DATABASE_URL:
+        # Ambil semua pengguna dari database
+        users = await DbManger().get_all_users_with_thumbnails()
+        for user in users:
+            user_id = user['id']
+            # Hapus file thumbnail
+            thumb_path = ospath.join("Thumbnails/", f"{user_id}.jpg")
+            if await aiopath.exists(thumb_path):
+                await aioremove(thumb_path)
+            # Reset thumbnail di database
+            await DbManger().update_user_doc(user_id, 'thumb', None)
+
 async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None):
     user_id = from_user.id
     name = from_user.mention(style="html")
@@ -192,12 +205,7 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
         if not config_dict.get('DISABLE_THUMB', False):
             buttons.ibutton(f"{'✅️' if thumbmsg == 'Exists' else ''} Thumbnail", f"userset {user_id} thumb")
         else:
-            if DATABASE_URL:
-                await DbManger().update_user_doc(user_id, 'thumb', None)
-    # Hapus file thumbnail dari sistem
-            thumb_path = ospath.join("Thumbnails/", f"{user_id}.jpg")
-            if await aiopath.isfile(thumb_path):
-                await aioremove(thumb_path)
+            await reset_all_thumbnails()
             #pass
             
         #___________mod thumbnal___'''''''
