@@ -208,7 +208,6 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
         if not config_dict.get('DISABLE_THUMB', False):
             buttons.ibutton(f"{'✅️' if thumbmsg == 'Exists' else ''} Thumbnail", f"userset {user_id} thumb")
         else:
-         #   await delete_all_thumbnails()
             pass
             
         #___________mod thumbnal___'''''''
