@@ -208,8 +208,8 @@ async def get_user_settings(from_user, key=None, edit_type=None, edit_mode=None)
         if not config_dict.get('DISABLE_THUMB', False):
             buttons.ibutton(f"{'✅️' if thumbmsg == 'Exists' else ''} Thumbnail", f"userset {user_id} thumb")
         else:
-            await delete_all_thumbnails()
-          #  pass
+         #   await delete_all_thumbnails()
+            pass
             
         #___________mod thumbnal___'''''''
         split_size = get_readable_file_size(config_dict['LEECH_SPLIT_SIZE']) + ' (Default)' if user_dict.get('split_size', '') == '' else get_readable_file_size(user_dict['split_size'])
