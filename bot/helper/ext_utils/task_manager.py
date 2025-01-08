@@ -228,5 +228,5 @@ async def task_utils(message):
     if (bmax_tasks := config_dict['BOT_MAX_TASKS']) and len(download_dict) >= bmax_tasks:
         msg.append(f"Bot Max Tasks limit exceeded.\nBot max tasks limit is {bmax_tasks}.\nPlease wait for the completion of other tasks.")
     if (maxtask := config_dict['USER_MAX_TASKS']) and await get_user_tasks(message.from_user.id, maxtask):
-        msg.append(f"Your tasks limit exceeded for {maxtask} tasks")
+        msg.append(f"Melebihi batas task yg di ijinkan, yg di ijinkan maximal {maxtask} tasks")
     return msg, button
