@@ -147,8 +147,8 @@ if UPSTREAM_REPO is not None:
 
     log_info("Fetching latest updates...")
     if update.returncode == 0:
-        log_info("Successfully updated...")
-        log_info("Thanks For Using")
+        log_info("Sukses mengupdate dari {UPSTREAM_REPO} dengan branch {UPSTREAM_BRANCH}")
+        log_info("Thank for using this repo http://github.com/syuhadak27")
     else:
         log_error("Error while getting latest updates.")
         log_error("Check if entered UPSTREAM_REPO is valid or not!")
