@@ -193,6 +193,23 @@ async def load_config():
     if len(MIRROR_FILENAME_REMNAME) == 0:
         MIRROR_FILENAME_REMNAME = ''
         
+#___________________________MODIF DISINI________________________________
+    BAR_PENUH = environ.get('BAR_PENUH', '')
+    if len(BAR_PENUH) == 0:
+        BAR_PENUH = '●'
+    elif len(BAR_PENUH) > 1:
+        BAR_PENUH = BAR_PENUH[0]  # Ambil hanya karakter pertama
+
+
+    BAR_KOSONG = environ.get('BAR_KOSONG', '')
+    if len(BAR_KOSONG) == 0:
+        BAR_KOSONG = '◌'
+    elif len(BAR_KOSONG) > 1:
+        BAR_KOSONG = BAR_KOSONG[0]  # Ambil hanya karakter pertama
+
+
+#__________________________AKHIR MOD____________________________
+        
     SEARCH_PLUGINS = environ.get('SEARCH_PLUGINS', '')
     if len(SEARCH_PLUGINS) == 0:
         SEARCH_PLUGINS = ''
@@ -591,6 +608,8 @@ async def load_config():
     config_dict.update({'ANIME_TEMPLATE': DEF_ANI_TEMP,
                         'AS_DOCUMENT': AS_DOCUMENT,
                         'AUTHORIZED_CHATS': AUTHORIZED_CHATS,
+                        'BAR_KOSONG': BAR_KOSONG,
+                        'BAR_PENUH': BAR_PENUH,
                         'DISABLE_THUMB' : DISABLE_THUMB,
                         'AUTO_DELETE_MESSAGE_DURATION': AUTO_DELETE_MESSAGE_DURATION,
                         'BASE_URL': BASE_URL,
