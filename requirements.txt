@@ -44,4 +44,4 @@ tenacity
 tgcrypto
 uvloop
 xattr
-yt-dlp==2024.12.13
+yt-dlp[default,curl-cffi]
