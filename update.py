@@ -114,14 +114,14 @@ UPSTREAM_REPO = environ.get(
     ""
 )
 if len(UPSTREAM_REPO) == 0:
-    UPSTREAM_REPO = "https://github.com/Syuhadak27/wzmlx-indo"
+    UPSTREAM_REPO = "https://github.com/dinaneq/wzmlx"
 
 UPSTREAM_BRANCH = environ.get(
     "UPSTREAM_BRANCH",
     ""
 )
 if len(UPSTREAM_BRANCH) == 0:
-    UPSTREAM_BRANCH = "nusantara"
+    UPSTREAM_BRANCH = "update"
 
 if UPSTREAM_REPO is not None:
     if path.exists(".git"):
