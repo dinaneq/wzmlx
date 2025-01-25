@@ -418,6 +418,22 @@ def mediafireFolder(url):
         sess=session,
     )
     folder_infos = []
+    
+def cf_bypass(url):
+    "DO NOT ABUSE THIS"
+    try:
+        data = {"cmd": "request.get", "url": url, "maxTimeout": 60000}
+        _json = post(
+            "https://cf.jmdkh.eu.org/v1",
+            headers={"Content-Type": "application/json"},
+            json=data,
+        ).json()
+        if _json["status"] == "ok":
+            return _json["solution"]["response"]
+    except Exception as e:
+        e
+    raise DirectDownloadLinkException("ERROR: Con't bypass cloudflare")
+
 
 def osdn(url):
     with create_scraper() as session:
